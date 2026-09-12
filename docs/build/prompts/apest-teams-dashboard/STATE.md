@@ -26,18 +26,16 @@
 
 ---
 
-## Phase Status Ledger
-
-| Phase | Description | Status | Verification Gate |
-|---|---|---|---|
-| **Phase 0** | Orientation, Types & State Reconciliation | `COMPLETE` | `src/lib/types/apest.ts` strictly typed, zero `any` casts |
-| **Phase 1** | Master Shell, Chrome & Responsive Compass | `COMPLETE` | Sticky left rail + mobile quick-jump bar + rotating Christological banner |
-| **Phase 2** | Phase 1 Panels (Identity & Profiles: Panels 1 & 2) | `COMPLETE` | 5 color orbs, dynamic SVG filaments, Zone A/B/C person-first cards |
-| **Phase 3** | Phase 2 Panels (Systemic Diagnosis: Panels 3, 4, 5 & 6) | `COMPLETE` | Asymmetric 5Q pentagon, metabolic cascade loop, 5 shadow cards, ST calendar monopoly |
-| **Phase 4** | Phase 3 Panels (Trajectory & Arcs: Panels 7 & 8) | `COMPLETE` | 5-level maturity spine (pinned Level 1.5), sigmoid movement arc (3-yr plateau) |
-| **Phase 5** | Phase 4 Panels (Action & Fullness: Panels 9, 10 & 11) | `COMPLETE` | 30/90/365 horizons, 6 starter cards with 90s silence timer, Ephesians 4:13 doxology |
-| **Phase 6** | End-to-End Cross Bridges, Drawers & Print Engine | `COMPLETE` | All sub-routes connected, 12-page print guide, dead links resolved |
-| **Gate-FINAL** | End-to-End Verification (Build, Typecheck, Unit Tests) | `COMPLETE` | `npm test` 6/6 passed, `npx tsc --noEmit` exit 0, `npm run build` 13/13 static pages |
+## Phase Status Checklist
+- [x] Phase 0 — Orientation & State Reconciliation (Types, Fixtures, Engine)
+- [x] Phase 1 — Master Shell & Responsive Chrome (Desktop sticky rail + Mobile Compass)
+- [x] Phase 2 — Phase 1 Panels (Identity & Individual Calling: Panels 1 & 2)
+- [x] Phase 3 — Phase 2 Panels (Systemic Diagnosis & Gaps: Panels 3, 4, 5 & 6)
+- [x] Phase 4 — Phase 3 Panels (Trajectory & Historical Arcs: Panels 7 & 8)
+- [x] Phase 5 — Phase 4 Panels (Action, Dialogue & Fullness: Panels 9, 10 & 11)
+- [x] Phase 6 — Drawers, Modals, Print Engine & Hardening (Thinking Hats, Copilot, Print Guide)
+- [x] Phase 7 — Testing & Verification (`npm test` 6/6, `npm run build` 13/13 routes static)
+- [x] Phase 8 — Production Certification & Sealing
 
 ---
 
