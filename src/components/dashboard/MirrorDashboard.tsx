@@ -18,7 +18,10 @@ import {
   Lock,
   Unlock,
   Sliders,
+  MessageSquare,
+  Bot,
 } from 'lucide-react';
+import { useTeam } from '@/context/TeamContext';
 import { ChristologicalBanner } from './ChristologicalBanner';
 import { Panel1Glance } from './panels/Panel1Glance';
 import { Panel2Profiles } from './panels/Panel2Profiles';
@@ -50,6 +53,7 @@ const PANELS_LIST = [
 ];
 
 export function MirrorDashboard() {
+  const { setIsThinkingHatsOpen, setIsCopilotOpen } = useTeam();
   // Sequential disclosure state
   // Panels 1-3 unlocked initially
   const [engagedPanels, setEngagedPanels] = useState<number[]>([1]);
@@ -134,6 +138,26 @@ export function MirrorDashboard() {
             >
               {isSequentialEnforced ? <Lock className="w-3.5 h-3.5 text-primary" /> : <Unlock className="w-3.5 h-3.5" />}
               <span>{isSequentialEnforced ? 'Sequential Mode' : 'Free Mode'}</span>
+            </button>
+
+            {/* Thinking Hats Studio Button */}
+            <button
+              onClick={() => setIsThinkingHatsOpen(true)}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule text-xs font-semibold text-foreground transition-colors shadow-xs"
+              title="Launch Thinking Hats Studio (Euclidean Tension Dialogue)"
+            >
+              <MessageSquare className="w-3.5 h-3.5 text-primary" />
+              <span className="hidden sm:inline">Thinking Hats</span>
+            </button>
+
+            {/* Missional Copilot Drawer Button */}
+            <button
+              onClick={() => setIsCopilotOpen(true)}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule text-xs font-semibold text-foreground transition-colors shadow-xs"
+              title="Open Missional Copilot AI Discernment Drawer"
+            >
+              <Bot className="w-3.5 h-3.5 text-primary" />
+              <span className="hidden sm:inline">Copilot</span>
             </button>
 
             {/* Letter to Marcus Modal */}
