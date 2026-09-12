@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { Sparkles, Heart, Printer, RotateCcw, ArrowUpRight, FileSpreadsheet, ArrowRight } from 'lucide-react';
+import { Sparkles, Heart, Printer, RotateCcw, ArrowUpRight, FileSpreadsheet, ArrowRight, Layers } from 'lucide-react';
 import Link from 'next/link';
+import { useTeam } from '@/context/TeamContext';
 
 export function Panel11FullnessVision({
   onRestart,
@@ -11,6 +12,7 @@ export function Panel11FullnessVision({
   onRestart?: () => void;
   onPrintExport?: () => void;
 }) {
+  const { setActiveLayerDrawer } = useTeam();
   // Ideal Balanced Pentagon Geometry
   const cx = 130;
   const cy = 130;
@@ -202,13 +204,14 @@ export function Panel11FullnessVision({
             </span>
           </div>
         </div>
-        <Link
-          href="/dashboard/export"
+        <button
+          onClick={() => setActiveLayerDrawer('export')}
           className="inline-flex items-center gap-1.5 px-4 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shrink-0 shadow-xs"
         >
-          <span>Open Board Dossier</span>
+          <Layers className="w-3.5 h-3.5 text-primary" />
+          <span>Open Board Dossier Drawer</span>
           <ArrowRight className="w-3.5 h-3.5 text-primary" />
-        </Link>
+        </button>
       </div>
 
       {/* Action Footer */}

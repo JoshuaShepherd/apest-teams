@@ -1,11 +1,13 @@
 'use client';
 
 import React from 'react';
-import { CalendarClock, CheckCircle2, UserCheck, Flame, Heart, Compass, Sparkles, ArrowRight, GitMerge } from 'lucide-react';
+import { CalendarClock, CheckCircle2, UserCheck, Flame, Heart, Compass, Sparkles, ArrowRight, GitMerge, Layers } from 'lucide-react';
 import Link from 'next/link';
+import { useTeam } from '@/context/TeamContext';
 import { AmbiguityNote } from '../AmbiguityNote';
 
 export function Panel9CorrectivePathway({ onNext }: { onNext?: () => void }) {
+  const { setActiveLayerDrawer } = useTeam();
   return (
     <section
       id="panel-9"
@@ -220,13 +222,16 @@ export function Panel9CorrectivePathway({ onNext }: { onNext?: () => void }) {
               Engage the Thinking Hats facilitation studio and explore all 10 canonical pairwise friction relationships.
             </p>
           </div>
-          <Link
-            href="/dashboard/correctives"
+          <button
+            onClick={() => setActiveLayerDrawer('correctives')}
             className="inline-flex items-center justify-between px-3.5 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shadow-xs"
           >
-            <span>Open Correctives Studio</span>
+            <span className="flex items-center gap-1.5">
+              <Layers className="w-3.5 h-3.5 text-primary" />
+              <span>Open Correctives Drawer</span>
+            </span>
             <ArrowRight className="w-3.5 h-3.5 text-primary" />
-          </Link>
+          </button>
         </div>
 
         <div className="p-4 rounded-xl bg-surface-subtle border border-border-rule flex flex-col justify-between gap-3 text-xs">
@@ -239,13 +244,16 @@ export function Panel9CorrectivePathway({ onNext }: { onNext?: () => void }) {
               Track the team longitudinal health score, orbital member development stages, and weekly action calendar.
             </p>
           </div>
-          <Link
-            href="/dashboard/formation"
+          <button
+            onClick={() => setActiveLayerDrawer('formation')}
             className="inline-flex items-center justify-between px-3.5 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shadow-xs"
           >
-            <span>Open 12-Week Roadmap</span>
+            <span className="flex items-center gap-1.5">
+              <Layers className="w-3.5 h-3.5 text-clay" />
+              <span>Open Formation Drawer</span>
+            </span>
             <ArrowRight className="w-3.5 h-3.5 text-clay" />
-          </Link>
+          </button>
         </div>
       </div>
 

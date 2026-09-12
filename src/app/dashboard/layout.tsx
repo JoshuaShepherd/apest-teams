@@ -7,6 +7,7 @@ import { MemberProfileDrawer } from '@/components/shell/MemberProfileDrawer';
 import { MissionalCopilotDrawer } from '@/components/layer5/MissionalCopilotDrawer';
 import { ThinkingHatsStudio } from '@/components/layer3/ThinkingHatsStudio';
 import { QuarterlyReviewWizard } from '@/components/layer5/QuarterlyReviewWizard';
+import { LayerDeepDiveDrawer } from '@/components/dashboard/LayerDeepDiveDrawer';
 import { useTeam } from '@/context/TeamContext';
 
 export default function DashboardLayout({
@@ -32,6 +33,7 @@ export default function DashboardLayout({
       <MissionalCopilotDrawer />
       <ThinkingHatsStudio />
       <QuarterlyReviewWizard />
+      <LayerDeepDiveDrawer />
     </div>
   );
 }

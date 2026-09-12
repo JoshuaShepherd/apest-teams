@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, RefreshCw, AlertTriangle, GitMerge, CheckCircle, Activity } from 'lucide-react';
+import { ArrowRight, RefreshCw, AlertTriangle, GitMerge, CheckCircle, Activity, Layers } from 'lucide-react';
 import Link from 'next/link';
+import { useTeam } from '@/context/TeamContext';
 import { EmptyChairIcon } from '../SuppressionBadge';
 
 const CASCADE_STEPS = [
@@ -59,6 +60,7 @@ const CASCADE_STEPS = [
 ];
 
 export function Panel4Cascade({ onNext }: { onNext?: () => void }) {
+  const { setActiveLayerDrawer } = useTeam();
   return (
     <section
       id="panel-4"
@@ -227,13 +229,14 @@ export function Panel4Cascade({ onNext }: { onNext?: () => void }) {
             </span>
           </div>
         </div>
-        <Link
-          href="/dashboard/diagnostics"
+        <button
+          onClick={() => setActiveLayerDrawer('diagnostics')}
           className="inline-flex items-center gap-1.5 px-4 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shrink-0 shadow-xs"
         >
-          <span>Open Layer 2 Diagnostics</span>
+          <Layers className="w-3.5 h-3.5 text-primary" />
+          <span>Open Diagnostics Drawer</span>
           <ArrowRight className="w-3.5 h-3.5 text-primary" />
-        </Link>
+        </button>
       </div>
 
       {/* Sequential advance prompt */}

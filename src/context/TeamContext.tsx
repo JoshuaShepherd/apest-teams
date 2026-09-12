@@ -11,6 +11,8 @@ import {
 import { INITIAL_RESTORATION_ROAD_STATE } from '@/lib/fixtures/restoration-road';
 import { calculateTeamMetrics } from '@/lib/engine/calculator';
 
+export type LayerDrawerId = 'portrait' | 'diagnostics' | 'correctives' | 'formation' | 'export' | null;
+
 interface TeamContextValue {
   state: TeamState;
   metrics: ComputedTeamMetrics;
@@ -24,6 +26,8 @@ interface TeamContextValue {
   setIsThinkingHatsOpen: (open: boolean) => void;
   isQuarterlyReviewOpen: boolean;
   setIsQuarterlyReviewOpen: (open: boolean) => void;
+  activeLayerDrawer: LayerDrawerId;
+  setActiveLayerDrawer: (id: LayerDrawerId) => void;
   provenance: boolean;
   setProvenance: React.Dispatch<React.SetStateAction<boolean>>;
   addMember: (member: TeamMember) => void;
@@ -43,6 +47,7 @@ export function TeamProvider({ children }: { children: React.ReactNode }) {
   const [copilotMode, setCopilotMode] = useState<'interpretation' | 'challenge'>('interpretation');
   const [isThinkingHatsOpen, setIsThinkingHatsOpen] = useState(false);
   const [isQuarterlyReviewOpen, setIsQuarterlyReviewOpen] = useState(false);
+  const [activeLayerDrawer, setActiveLayerDrawer] = useState<LayerDrawerId>(null);
   const [provenance, setProvenance] = useState(false);
 
   // Compute metrics dynamically whenever members change
@@ -102,6 +107,8 @@ export function TeamProvider({ children }: { children: React.ReactNode }) {
         setIsThinkingHatsOpen,
         isQuarterlyReviewOpen,
         setIsQuarterlyReviewOpen,
+        activeLayerDrawer,
+        setActiveLayerDrawer,
         provenance,
         setProvenance,
         addMember,

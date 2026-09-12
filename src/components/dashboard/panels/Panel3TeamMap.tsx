@@ -3,9 +3,11 @@
 import React from 'react';
 import { AlertTriangle, Info, CheckCircle2, ShieldAlert, Layers, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { useTeam } from '@/context/TeamContext';
 import { EmptyChairIcon, MutedMicIcon, AbsenceFlag, SuppressionFlag } from '../SuppressionBadge';
 
 export function Panel3TeamMap({ onNext }: { onNext?: () => void }) {
+  const { setActiveLayerDrawer } = useTeam();
   // Pentagon geometry calculation
   // Radius R = 130, Center = (160, 160)
   // Points: top is A (Apostle), then P, E, S, T clockwise
@@ -318,13 +320,14 @@ export function Panel3TeamMap({ onNext }: { onNext?: () => void }) {
             </span>
           </div>
         </div>
-        <Link
-          href="/dashboard/portrait"
+        <button
+          onClick={() => setActiveLayerDrawer('portrait')}
           className="inline-flex items-center gap-1.5 px-4 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shrink-0 shadow-xs"
         >
-          <span>Open Layer 1 Portrait</span>
+          <Layers className="w-3.5 h-3.5 text-primary" />
+          <span>Open Radar & Pairing Drawer</span>
           <ArrowRight className="w-3.5 h-3.5 text-primary" />
-        </Link>
+        </button>
       </div>
 
       {/* Sequential advance prompt */}

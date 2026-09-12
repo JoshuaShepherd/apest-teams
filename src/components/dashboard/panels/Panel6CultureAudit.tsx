@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Calendar, Plus, Trash2, Key, HelpCircle, Activity, ArrowRight } from 'lucide-react';
+import { Calendar, Plus, Trash2, Key, HelpCircle, Activity, ArrowRight, Layers } from 'lucide-react';
 import Link from 'next/link';
+import { useTeam } from '@/context/TeamContext';
 import { EmptyChairIcon, MutedMicIcon, AbsenceFlag, SuppressionFlag } from '../SuppressionBadge';
 
 interface ActivityItem {
@@ -24,6 +25,7 @@ const INITIAL_ACTIVITIES: ActivityItem[] = [
 ];
 
 export function Panel6CultureAudit({ onNext }: { onNext?: () => void }) {
+  const { setActiveLayerDrawer } = useTeam();
   const [activities, setActivities] = useState<ActivityItem[]>(INITIAL_ACTIVITIES);
   const [newActivityName, setNewActivityName] = useState('');
   const [newPrimary, setNewPrimary] = useState('S');
@@ -345,13 +347,14 @@ export function Panel6CultureAudit({ onNext }: { onNext?: () => void }) {
             </span>
           </div>
         </div>
-        <Link
-          href="/dashboard/diagnostics"
+        <button
+          onClick={() => setActiveLayerDrawer('diagnostics')}
           className="inline-flex items-center gap-1.5 px-4 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shrink-0 shadow-xs"
         >
-          <span>Open Suppression Grid</span>
+          <Layers className="w-3.5 h-3.5 text-primary" />
+          <span>Open Suppression Grid Drawer</span>
           <ArrowRight className="w-3.5 h-3.5 text-primary" />
-        </Link>
+        </button>
       </div>
 
       {/* Sequential advance prompt */}
