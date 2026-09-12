@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"></link>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"></link>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet"></link>
+<style>
+  body{margin:0;}
+  a{color:#37203b;text-decoration:none;}
+  a:hover{color:#4e3652;}
+  ::selection{background:#e4d4e6;}
+  input::placeholder{color:#9a8d9c;}
+</style>
+</helmet>
+
+<div data-screen-label="Home" style="background:#fbf9f4;color:#1b1c19;font-family:Manrope,sans-serif;min-height:100vh;">
+
+  <!-- UTILITY ROW -->
+  <div style="background:#ebe8e3;padding:12px 32px;display:flex;justify-content:space-between;align-items:center;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:15px;color:#1c1917;">movemental</span>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#5b6b7a;">Part of the Movemental network</span>
+    </div>
+    <a href="#" style="flex-shrink:0;"><span style="font-family:'Caveat',cursive;font-weight:600;font-size:30px;color:#37203b;line-height:1;display:inline-block;transform:rotate(-2deg);">Alan Hirsch</span></a>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="opacity:0.6;"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke="#1b1c19" stroke-width="1.6"></path></svg>
+      <a href="#" style="background:#37203b;color:#fbf9f4;padding:9px 18px;border-radius:9999px;font-size:12px;font-weight:700;letter-spacing:0.04em;display:flex;align-items:center;gap:6px;" style-hover="background:#4e3652;">SIGN IN</a>
+      <a href="#" style="font-size:12px;font-weight:700;letter-spacing:0.04em;color:#4a3f4c;">SIGN UP</a>
+    </div>
+  </div>
+
+  <!-- NAV ROW -->
+  <div style="background:#fefcf8;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;">
+    <nav style="display:flex;gap:32px;align-items:center;">
+      <a href="/themes" style="font-size:14px;font-weight:600;color:#2a2426;display:flex;align-items:center;gap:4px;">Themes <span style="font-size:10px;">▾</span></a>
+      <a href="/library" style="font-size:14px;font-weight:600;color:#2a2426;display:flex;align-items:center;gap:4px;">Library <span style="font-size:10px;">▾</span></a>
+      <a href="/guides" style="font-size:14px;font-weight:600;color:#2a2426;">Practices</a>
+      <a href="/formation" style="font-size:14px;font-weight:600;color:#2a2426;display:flex;align-items:center;gap:4px;">Formation <span style="font-size:10px;">▾</span></a>
+      <a href="/about" style="font-size:14px;font-weight:600;color:#2a2426;">About</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" style="opacity:0.55;"><circle cx="11" cy="11" r="7" stroke="#1b1c19" stroke-width="1.6"></circle><path d="M21 21l-4.3-4.3" stroke="#1b1c19" stroke-width="1.6" stroke-linecap="round"></path></svg>
+      <a href="/ai-lab" style="border:1.5px solid #c9bdca;color:#37203b;padding:9px 20px;border-radius:9999px;font-size:12.5px;font-weight:700;letter-spacing:0.02em;display:flex;align-items:center;gap:8px;" style-hover="border-color:#37203b;"><span style="width:5px;height:5px;border-radius:50%;background:#37203b;display:inline-block;"></span>AI LAB</a>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section style="display:grid;grid-template-columns:1fr 1.15fr;gap:0;align-items:stretch;min-height:600px;">
+    <div style="padding:88px 48px 88px 64px;display:flex;flex-direction:column;justify-content:center;gap:24px;max-width:640px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#6f6370;text-transform:uppercase;display:flex;align-items:center;gap:10px;"><span style="width:18px;height:1px;background:#6f6370;display:inline-block;"></span>Reactivating apostolic movements in our time</div>
+      <h1 style="font-family:Newsreader,serif;font-weight:800;font-size:clamp(2.6rem,4.6vw,3.6rem);line-height:1.08;letter-spacing:-0.02em;margin:0;">The church was made for<br/><em style="font-style:italic;color:#37203b;border-bottom:4px solid #cdb9cf;padding-bottom:2px;">movement</em></h1>
+      <p style="font-size:18px;line-height:1.65;color:#3a2f3b;max-width:32em;margin:0;">Bring a real challenge from your church, team, neighborhood, or life. Alan's work can help you see it differently—and take one faithful next step.</p>
+      <div style="display:flex;flex-direction:column;align-items:stretch;margin-top:8px;">
+      <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;">
+        <div style="display:flex;flex-direction:column;align-items:flex-start;">
+          <a href="/guides" style="background:#37203b;color:#fbf9f4;padding:15px 28px;border-radius:9999px;font-weight:600;font-size:15px;display:flex;align-items:center;gap:10px;" style-hover="background:#4e3652;" style-focus="outline:2px solid #37203b;outline-offset:3px;">Start with a real situation <span>→</span></a>
+          <sc-if value="{{ showAccent }}" hint-placeholder-val="{{ false }}">
+            <svg width="132" height="9" viewBox="0 0 132 9" fill="none" style="margin-top:6px;margin-left:96px;opacity:0.42;flex-shrink:0;"><path d="M2 5.6C22 2.4 47 2.1 68 4.2c19 1.9 40 2.6 62 0.4" stroke="#37203b" stroke-width="2.4" stroke-linecap="round"></path><path d="M9 8c18-2.1 41-2.4 60-0.9" stroke="#37203b" stroke-width="1.2" stroke-linecap="round" opacity="0.6"></path></svg>
+          </sc-if>
+        </div>
+        <a href="/themes" style="border:1.5px solid #c9bdca;color:#1b1c19;padding:14px 26px;border-radius:9999px;font-weight:600;font-size:15px;" style-hover="border-color:#37203b;" style-focus="outline:2px solid #37203b;outline-offset:3px;">Explore Alan's work</a>
+      </div>
+
+      <!-- QUIET AI LAB LINE -->
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;margin-top:18px;font-size:14px;line-height:1.55;">
+        <span style="color:#6f6370;">Already know what you're looking for?</span>
+        <a href="/ai-lab" style="color:#4a3f4c;text-decoration:underline;text-decoration-color:#c9bdca;text-underline-offset:3px;" style-hover="color:#37203b;" style-focus="outline:2px solid #37203b;outline-offset:3px;">Research Alan's corpus in AI Lab →</a>
+      </div>
+
+      <!-- RETURNING PRACTITIONER -->
+      <sc-if value="{{ showResume }}" hint-placeholder-val="{{ false }}">
+        <a href="/apest-local" style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13.5px;color:#6f6370;" style-hover="color:#37203b;" style-focus="outline:2px solid #37203b;outline-offset:3px;">
+          <span aria-hidden="true" style="width:6px;height:6px;border-radius:50%;background:#37203b;display:inline-block;flex-shrink:0;"></span>Continue your APEST Local practice →
+        </a>
+      </sc-if>
+
+      <!-- LIVE PROOF SLOT -->
+      <sc-if value="{{ showProof }}" hint-placeholder-val="{{ false }}">
+        <a href="/apest-field" style="display:flex;align-items:center;gap:8px;margin-top:14px;font-size:13px;color:#6f6370;" style-hover="color:#37203b;" style-focus="outline:2px solid #37203b;outline-offset:3px;">
+          <span aria-hidden="true" style="width:6px;height:6px;border-radius:50%;background:#37203b;display:inline-block;flex-shrink:0;"></span>{{ proofText }}
+        </a>
+      </sc-if>
+      </div>
+    </div>
+    <div style="position:relative;overflow:hidden;background:#f0eee9;">
+      <div style="position:absolute;inset:0;opacity:0.6;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/art/textures/art-texture-hero-background.webp" alt="" style="width:100%;height:100%;object-fit:cover;"></img></div>
+      <div style="position:absolute;top:52px;right:56px;bottom:52px;width:min(380px,38vw);background:#fefcf8;padding:10px 10px 44px;box-shadow:0 24px 60px rgba(55,32,59,0.18);">
+        <div style="position:relative;width:100%;height:100%;">
+          <img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/headshots/alan-hero-4x5.webp" alt="Alan Hirsch" style="width:100%;height:100%;object-fit:cover;display:block;"></img>
+          <div style="position:absolute;left:0;right:0;bottom:0;padding:14px 4px;font-family:Newsreader,serif;font-style:italic;font-size:14px;color:#fefcf8;background:linear-gradient(to top,rgba(20,14,20,0.55),transparent);">Alan Hirsch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT ARE YOU FACING -->
+  <section style="padding:104px 64px;background:#fefcf8;border-top:1px solid #e4e2dd;border-bottom:1px solid #e4e2dd;">
+    <div style="max-width:700px;margin-bottom:48px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#37203b;text-transform:uppercase;margin-bottom:14px;">Start here</div>
+      <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:38px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 14px;">What are you facing?</h2>
+      <p style="font-size:16px;line-height:1.65;color:#3a2f3b;margin:0;">You don't need to know Alan's frameworks to begin. Start with something real. Each path draws from his work and helps you move toward a practice you can try in your actual context.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+
+      <div style="background:#f5f3ee;border-radius:14px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px;">
+        <span style="align-self:flex-start;background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">MDNA</span>
+        <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:22px;line-height:1.28;margin:0;text-wrap:pretty;">Our church is working harder, but it isn't becoming a movement.</h3>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Explore the deeper conditions that allow movements to reproduce rather than merely maintain activity.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;">
+          <a href="/guides/mdna" style="font-size:14px;font-weight:700;color:#37203b;">Start a guided practice →</a>
+          <a href="/themes/mdna" style="font-size:13px;color:#6f6370;" style-hover="color:#37203b;">Understand mDNA</a>
+        </div>
+      </div>
+
+      <div style="background:#f5f3ee;border-radius:14px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px;">
+        <span style="align-self:flex-start;background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">METANOIA</span>
+        <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:22px;line-height:1.28;margin:0;text-wrap:pretty;">We know something has to change, but change never seems to go deep enough.</h3>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Work beneath technique and behavior toward the assumptions and imagination shaping what is possible.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;">
+          <a href="/guides/metanoia" style="font-size:14px;font-weight:700;color:#37203b;">Start a guided practice →</a>
+          <a href="/themes/metanoia" style="font-size:13px;color:#6f6370;" style-hover="color:#37203b;">Understand Metanoia</a>
+        </div>
+      </div>
+
+      <div style="background:#f5f3ee;border-radius:14px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px;">
+        <span style="align-self:flex-start;background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">REFRAMATION</span>
+        <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:22px;line-height:1.28;margin:0;text-wrap:pretty;">The way we're seeing God, church, and mission feels too small.</h3>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Examine the frame itself—not simply what you are doing inside it.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;">
+          <a href="/guides/reframation" style="font-size:14px;font-weight:700;color:#37203b;">Start a guided practice →</a>
+          <a href="/themes/reframation" style="font-size:13px;color:#6f6370;" style-hover="color:#37203b;">Understand Reframation</a>
+        </div>
+      </div>
+
+      <div style="background:#f5f3ee;border-radius:14px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px;">
+        <span style="align-self:flex-start;background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">DISCIPLESHIP</span>
+        <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:22px;line-height:1.28;margin:0;text-wrap:pretty;">We're producing participants, but not people who make disciples.</h3>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Move from information and attendance toward practices that reproduce a way of life.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;">
+          <a href="/guides/discipleship" style="font-size:14px;font-weight:700;color:#37203b;">Start a guided practice →</a>
+          <a href="/themes/discipleship" style="font-size:13px;color:#6f6370;" style-hover="color:#37203b;">Understand Discipleship</a>
+        </div>
+      </div>
+
+      <div style="background:#f5f3ee;border-radius:14px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px;">
+        <span style="align-self:flex-start;background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">MOVEMENT INTELLIGENCE</span>
+        <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:22px;line-height:1.28;margin:0;text-wrap:pretty;">We can't see why some movements multiply and others stall.</h3>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Learn to recognize the dynamics, patterns, and conditions that shape movement.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;">
+          <a href="/guides/movement-intelligence" style="font-size:14px;font-weight:700;color:#37203b;">Start a guided practice →</a>
+          <a href="/themes/movement-intelligence" style="font-size:13px;color:#6f6370;" style-hover="color:#37203b;">Understand Movement Intelligence</a>
+        </div>
+      </div>
+
+      <div style="background:#f5f3ee;border-radius:14px;padding:28px 28px 24px;display:flex;flex-direction:column;gap:14px;">
+        <span style="align-self:flex-start;background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">APEST</span>
+        <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:22px;line-height:1.28;margin:0;text-wrap:pretty;">The gifts are in the room, but our leadership still bottlenecks around a few people.</h3>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Explore how apostolic, prophetic, evangelistic, shepherding, and teaching intelligence can be activated across the whole body.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;">
+          <a href="/guides/apest" style="font-size:14px;font-weight:700;color:#37203b;">Start a guided practice →</a>
+          <a href="/themes/apest" style="font-size:13px;color:#6f6370;" style-hover="color:#37203b;">Understand APEST</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FROM A REAL QUESTION TO A REAL PRACTICE -->
+  <section style="padding:96px 64px;background:#ebe8e3;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="max-width:680px;margin-bottom:52px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#6f6370;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span style="width:18px;height:1px;background:#6f6370;display:inline-block;"></span>How it works</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:36px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 16px;">From a real question to a real practice</h2>
+        <p style="font-size:16px;line-height:1.7;color:#3a2f3b;margin:0;">Each guide draws from Alan's published work, helps you work through your actual context, and ends with one practice to attempt in real life. When you're done, come back and reflect on what happened.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px;margin-bottom:44px;">
+        <div style="border-top:2px solid #37203b;padding-top:16px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#6f6370;margin-bottom:10px;">01</div>
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:19px;line-height:1.3;">Bring your situation</div>
+        </div>
+        <div style="border-top:2px solid #c9bdca;padding-top:16px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#6f6370;margin-bottom:10px;">02</div>
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:19px;line-height:1.3;">See differently</div>
+        </div>
+        <div style="border-top:2px solid #c9bdca;padding-top:16px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#6f6370;margin-bottom:10px;">03</div>
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:19px;line-height:1.3;">Choose a practice</div>
+        </div>
+        <div style="border-top:2px solid #c9bdca;padding-top:16px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#6f6370;margin-bottom:10px;">04</div>
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:19px;line-height:1.3;">Go do it</div>
+        </div>
+        <div style="border-top:2px solid #c9bdca;padding-top:16px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#6f6370;margin-bottom:10px;">05</div>
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:19px;line-height:1.3;">Return and reflect</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:28px;justify-content:space-between;border-top:1px solid #d8d4cd;padding-top:32px;">
+        <p style="font-family:Newsreader,serif;font-style:italic;font-size:17px;line-height:1.6;color:#3a2f3b;margin:0;max-width:38em;">The goal is not to keep you talking to a screen. The work happens in your life, your relationships, your neighborhood, your church, and your community.</p>
+        <a href="/guides" style="background:#37203b;color:#fbf9f4;padding:15px 28px;border-radius:9999px;font-weight:600;font-size:15px;display:flex;align-items:center;gap:10px;flex-shrink:0;" style-hover="background:#4e3652;" style-focus="outline:2px solid #37203b;outline-offset:3px;">Choose a guided practice <span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOVEMENTAL NETWORK -->
+  <section style="background:#fefcf8;border-bottom:1px solid #e4e2dd;padding:96px 64px;">
+    <div style="max-width:700px;margin-bottom:44px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#5b6b7a;text-transform:uppercase;display:inline-block;border-bottom:2px solid #5b6b7a;padding-bottom:6px;margin-bottom:22px;">The Movemental Network</div>
+      <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:36px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 16px;">Part of a living network</h2>
+      <p style="font-size:16px;line-height:1.7;color:#3a2f3b;margin:0;">Alan's work sits within a fellowship of movement leaders who have learned, practiced, written, and worked alongside one another for decades. Their voices remain distinct. Their relationships are real.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:56px;">
+      <div>
+        <p style="font-family:Newsreader,serif;font-style:italic;font-size:22px;line-height:1.5;color:#241f26;margin:0 0 20px;max-width:34em;">"Alan sees the DNA of movements more clearly than anyone I know. His work has quietly rewired the way we plant and multiply."</p>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:22px;">
+          <div style="width:40px;height:40px;flex-shrink:0;border-radius:50%;overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/movemental/voices/neil-cole.webp" alt="Neil Cole" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div>
+          <div>
+            <div style="font-weight:700;font-size:14px;">Neil Cole</div>
+            <div style="font-size:12px;color:#6f6370;">Author, Organic Church</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:7px;margin-bottom:28px;">
+          <span style="width:6px;height:6px;border-radius:9999px;background:#d8d1d9;display:inline-block;"></span>
+          <span style="width:6px;height:6px;border-radius:9999px;background:#d8d1d9;display:inline-block;"></span>
+          <span style="width:22px;height:6px;border-radius:9999px;background:#37203b;display:inline-block;"></span>
+          <span style="width:6px;height:6px;border-radius:9999px;background:#d8d1d9;display:inline-block;"></span>
+          <span style="width:6px;height:6px;border-radius:9999px;background:#d8d1d9;display:inline-block;"></span>
+          <span style="width:6px;height:6px;border-radius:9999px;background:#d8d1d9;display:inline-block;"></span>
+          <span style="width:6px;height:6px;border-radius:9999px;background:#d8d1d9;display:inline-block;"></span>
+          <span style="width:6px;height:6px;border-radius:9999px;background:#d8d1d9;display:inline-block;"></span>
+        </div>
+        <a href="/network" style="border:1.5px solid #c9bdca;color:#1b1c19;padding:13px 26px;border-radius:9999px;font-weight:600;font-size:14.5px;display:inline-flex;align-items:center;gap:10px;" style-hover="border-color:#37203b;" style-focus="outline:2px solid #37203b;outline-offset:3px;">Explore the Movemental Network <span>→</span></a>
+      </div>
+      <div style="border-left:1px solid #e4e2dd;padding-left:44px;display:flex;flex-direction:column;gap:14px;">
+        <span style="font-family:Manrope,sans-serif;font-weight:700;font-size:13px;color:#1c1917;">movemental</span>
+        <div style="display:flex;">
+          <div title="Brad Brisco" style="width:34px;height:34px;border-radius:50%;border:2px solid #fefcf8;margin-right:-10px;background:#e4d4e6;color:#37203b;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:0.02em;">BB</div>
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid #fefcf8;margin-right:-10px;overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/movemental/voices/jr-woodward.webp" alt="JR Woodward" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div>
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid #fefcf8;margin-right:-10px;overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/movemental/voices/liz-rios.webp" alt="Liz Ríos" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div>
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid #fefcf8;margin-right:-10px;overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/movemental/voices/rob-wegner.webp" alt="Rob Wegner" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div>
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid #fefcf8;margin-right:-10px;overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/movemental/voices/lucas-pulley.webp" alt="Lucas Pulley" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div>
+          <div style="width:34px;height:34px;border-radius:50%;border:2px solid #fefcf8;background:#ebe8e3;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#6f6370;">+20</div>
+        </div>
+        <p style="font-family:Newsreader,serif;font-style:italic;font-size:14px;line-height:1.6;color:#3a2f3b;margin:0;">Alan teaches and writes alongside Brad Brisco, JR Woodward, Liz Ríos, and a fellowship of movement leaders.</p>
+        <a href="/network/brad-brisco" style="font-size:13.5px;font-weight:700;color:#37203b;">Brad Brisco's work →</a>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.08em;color:#5b6b7a;text-transform:uppercase;">Part of the Movemental network</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIX DOORWAYS -->
+  <section style="padding:104px 64px;background:#fbf9f4;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px;flex-wrap:wrap;">
+      <div style="max-width:680px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#37203b;text-transform:uppercase;margin-bottom:14px;">Themes</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:38px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 14px;">Six doorways into Alan's work</h2>
+        <p style="font-size:16px;line-height:1.65;color:#3a2f3b;margin:0;">Alan's work spans more than four decades. These six themes are not content categories so much as different ways into one larger question: what does it take to recover and sustain apostolic movement?</p>
+      </div>
+      <a href="/themes" style="font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#37203b;border-bottom:1.5px solid #37203b;padding-bottom:3px;flex-shrink:0;">Explore all six themes →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+      <a href="/themes/mdna" style="background:#f0eee9;border-radius:14px;overflow:hidden;display:block;color:#1b1c19;">
+        <div style="position:relative;height:150px;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/art/portals/art-portal-jesus-is-lord-mdna.webp" alt="mDNA" style="width:100%;height:100%;object-fit:cover;display:block;"></img><div style="position:absolute;left:16px;bottom:12px;font-family:Newsreader,serif;font-weight:700;font-size:19px;color:#fefcf8;text-shadow:0 2px 10px rgba(20,14,20,0.5);">mDNA</div></div>
+        <div style="padding:18px 18px 22px;font-size:13.5px;line-height:1.6;color:#3a2f3b;">The risen Christ coded six elements into his church – an irreducible pattern that, when recovered, releases the kind of movement we read about in Acts. Discover the missional DNA already within you.</div>
+      </a>
+      <a href="/themes/metanoia" style="background:#f0eee9;border-radius:14px;overflow:hidden;display:block;color:#1b1c19;">
+        <div style="position:relative;height:150px;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/art/portals/art-portal-metanoia.webp" alt="Metanoia" style="width:100%;height:100%;object-fit:cover;display:block;"></img><div style="position:absolute;left:16px;bottom:12px;font-family:Newsreader,serif;font-weight:700;font-size:19px;color:#fefcf8;text-shadow:0 2px 10px rgba(20,14,20,0.5);">Metanoia</div></div>
+        <div style="padding:18px 18px 22px;font-size:13.5px;line-height:1.6;color:#3a2f3b;">Repentance goes deeper than behavior change – it is the renovation of imagination, the reorientation of an entire life toward the reign of Christ. This pathway walks you into that transformation.</div>
+      </a>
+      <a href="/themes/reframation" style="background:#f0eee9;border-radius:14px;overflow:hidden;display:block;color:#1b1c19;">
+        <div style="position:relative;height:150px;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/art/portals/art-portal-reframation.webp" alt="Reframation" style="width:100%;height:100%;object-fit:cover;display:block;"></img><div style="position:absolute;left:16px;bottom:12px;font-family:Newsreader,serif;font-weight:700;font-size:19px;color:#fefcf8;text-shadow:0 2px 10px rgba(20,14,20,0.5);">Reframation</div></div>
+        <div style="padding:18px 18px 22px;font-size:13.5px;line-height:1.6;color:#3a2f3b;">Recover the Hebraic worldview behind the New Testament and rediscover the gospel as Jesus announced it – holistic, embodied, and alive with kingdom meaning.</div>
+      </a>
+      <a href="/themes/discipleship" style="background:#f0eee9;border-radius:14px;overflow:hidden;display:block;color:#1b1c19;">
+        <div style="position:relative;height:150px;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/art/portals/art-portal-discipleship-disciple-making.webp" alt="Discipleship" style="width:100%;height:100%;object-fit:cover;display:block;"></img><div style="position:absolute;left:16px;bottom:12px;font-family:Newsreader,serif;font-weight:700;font-size:19px;color:#fefcf8;text-shadow:0 2px 10px rgba(20,14,20,0.5);">Discipleship</div></div>
+        <div style="padding:18px 18px 22px;font-size:13.5px;line-height:1.6;color:#3a2f3b;">Every movement in history began with disciples following Jesus and making more disciples. Rediscover discipleship as the simple, reproducible, and lived center of everything the church is meant to be.</div>
+      </a>
+      <a href="/themes/movement-intelligence" style="background:#f0eee9;border-radius:14px;overflow:hidden;display:block;color:#1b1c19;">
+        <div style="position:relative;height:150px;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/art/portals/art-portal-movement-intelligence.webp" alt="Movement Intelligence" style="width:100%;height:100%;object-fit:cover;display:block;"></img><div style="position:absolute;left:16px;bottom:12px;font-family:Newsreader,serif;font-weight:700;font-size:19px;color:#fefcf8;text-shadow:0 2px 10px rgba(20,14,20,0.5);">Movement Intelligence</div></div>
+        <div style="padding:18px 18px 22px;font-size:13.5px;line-height:1.6;color:#3a2f3b;">The kingdom of God moves through networks, neighborhoods, and systems – often underground, always unstoppable. Discover the patterns of how Christ's movement grows and what our role is within it.</div>
+      </a>
+      <a href="/themes/apest" style="background:#f0eee9;border-radius:14px;overflow:hidden;display:block;color:#1b1c19;">
+        <div style="position:relative;height:150px;background:#37203b;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/art/textures/art-texture-hero-background.webp" alt="APEST" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.72;"></img><div style="position:absolute;left:16px;bottom:12px;font-family:Newsreader,serif;font-weight:700;font-size:19px;color:#fefcf8;text-shadow:0 2px 10px rgba(20,14,20,0.5);">APEST</div></div>
+        <div style="padding:18px 18px 22px;font-size:13.5px;line-height:1.6;color:#3a2f3b;">Apostolic, prophetic, evangelistic, shepherding, and teaching intelligence – five functions given to the whole body, not a few offices. Learn to recognize them, name them, and put them to work together.</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- APEST TEAMS — COMING SOON -->
+  <section style="padding:88px 64px;background:#f0eee9;border-top:1px solid #e4e2dd;border-bottom:1px solid #e4e2dd;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:56px;align-items:center;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#37203b;flex-shrink:0;"></span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#37203b;">Coming soon · APEST Teams</span>
+        </div>
+        <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:34px;line-height:1.18;letter-spacing:-0.01em;margin:0 0 16px;max-width:24ch;text-wrap:pretty">Your team has a fivefold pattern too.</h2>
+        <p style="font-size:16px;line-height:1.7;color:#3a2f3b;margin:0 0 14px;max-width:52ch;text-wrap:pretty">Each person in your group already holds a 5Q report naming their vocational pattern across the five functions Christ gave his Body. APEST Teams reads those reports together — no new questionnaire, no uploading a colleague's results — and produces one document that every participant reads.</p>
+        <p style="font-size:14.5px;line-height:1.7;color:#6f6370;margin:0 0 28px;max-width:50ch;">Not open yet. The preview page tells you what it reads, what you will need ready before it opens, and three things it refuses to do.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:18px;align-items:center;">
+          <a href="/apest-teams" style="background:#37203b;color:#fbf9f4;padding:14px 28px;border-radius:9999px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px;" style-hover="background:#4e3652;" style-focus="outline:2px solid #37203b;outline-offset:3px;">See the full preview <span>→</span></a>
+          <a href="/apest-teams#notify" style="font-size:14px;font-weight:700;color:#4e3652;border-bottom:1.5px solid #cec3cc;padding-bottom:3px;" style-hover="border-color:#37203b;">Notify me when it opens</a>
+        </div>
+      </div>
+      <div style="background:#fefcf8;border-radius:16px;padding:34px 32px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:16px;">Sample finding</div>
+        <p style="font-family:Newsreader,serif;font-size:25px;line-height:1.3;color:#37203b;margin:0 0 20px;text-wrap:pretty">Four of your five leaders lead by <em style="color:#4e3652;">tending</em>. Nobody here is charged with <em style="color:#4e3652;">going</em>.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:20px;display:flex;flex-direction:column;gap:12px;">
+          <div style="display:grid;grid-template-columns:82px 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;">Shepherding</span>
+            <span style="height:7px;border-radius:9999px;background:#37203b;"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;">4 / 5</span>
+          </div>
+          <div style="display:grid;grid-template-columns:82px 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;">Teaching</span>
+            <span style="height:7px;border-radius:9999px;background:linear-gradient(to right,#4e3652 62%,#e4e2dd 62%);"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;">3 / 5</span>
+          </div>
+          <div style="display:grid;grid-template-columns:82px 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;">Prophetic</span>
+            <span style="height:7px;border-radius:9999px;background:linear-gradient(to right,#4e3652 22%,#e4e2dd 22%);"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;">1 / 5</span>
+          </div>
+          <div style="display:grid;grid-template-columns:82px 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;">Evangelistic</span>
+            <span style="height:7px;border-radius:9999px;background:#e4e2dd;"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a8a99;">0 / 5</span>
+          </div>
+          <div style="display:grid;grid-template-columns:82px 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;">Apostolic</span>
+            <span style="height:7px;border-radius:9999px;background:#e4e2dd;"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a8a99;">0 / 5</span>
+          </div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#9a8a99;margin-top:22px;">Illustrative team of five · not a live report</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI LAB -->
+  <section style="background:#1c1620;display:grid;grid-template-columns:1fr 1fr;gap:0;min-height:520px;">
+    <div style="padding:88px 64px;display:flex;flex-direction:column;justify-content:center;gap:20px;max-width:640px;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#b09fb3;text-transform:uppercase;">AI Lab</div>
+      <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:36px;line-height:1.15;color:#fefcf8;margin:0;">Need to go deeper?</h2>
+      <div style="font-family:Newsreader,serif;font-style:italic;font-size:21px;line-height:1.35;color:#c9bdca;">Research Alan's work</div>
+      <p style="font-size:16px;line-height:1.7;color:#c9bdca;margin:0;">Explore four decades of Alan's books, articles, teaching, and frameworks through a source-grounded research conversation. AI Lab is for tracing ideas, comparing concepts, following citations, and investigating questions across Alan's corpus.</p>
+      <div style="display:flex;gap:10px;background:#2a2230;border-radius:9999px;padding:8px 8px 8px 20px;align-items:center;margin-top:4px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="opacity:0.6;flex-shrink:0;"><circle cx="11" cy="11" r="7" stroke="#fefcf8" stroke-width="1.6"></circle><path d="M21 21l-4.3-4.3" stroke="#fefcf8" stroke-width="1.6" stroke-linecap="round"></path></svg>
+        <input type="text" placeholder="Trace a concept across the corpus…" style="flex:1;background:none;border:none;outline:none;color:#fefcf8;font-size:14px;font-family:Manrope,sans-serif;"></input>
+        <button style="background:#37203b;color:#fefcf8;border:none;padding:10px 22px;border-radius:9999px;font-weight:700;font-size:13px;cursor:pointer;">ASK</button>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <span style="border:1px solid #4a3f4c;color:#c9bdca;padding:10px 18px;border-radius:9999px;font-size:12.5px;line-height:1.4;">How does Alan's understanding of metanoia develop across his books?</span>
+        <span style="border:1px solid #4a3f4c;color:#c9bdca;padding:10px 18px;border-radius:9999px;font-size:12.5px;line-height:1.4;">Compare the role of APEST inside mDNA with its treatment in 5Q.</span>
+        <span style="border:1px solid #4a3f4c;color:#c9bdca;padding:10px 18px;border-radius:9999px;font-size:12.5px;line-height:1.4;">Where does Alan connect disciple-making with movement multiplication?</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:center;margin-top:10px;">
+        <a href="/ai-lab" style="background:#e4d4e6;color:#241f26;padding:15px 28px;border-radius:9999px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px;" style-hover="background:#fefcf8;" style-focus="outline:2px solid #e4d4e6;outline-offset:3px;">Open AI Lab <span>→</span></a>
+        <a href="/library" style="font-size:14px;font-weight:700;color:#c9bdca;border-bottom:1.5px solid #4a3f4c;padding-bottom:3px;" style-hover="color:#fefcf8;">Browse the library</a>
+      </div>
+    </div>
+    <div style="position:relative;background:#1c1620;overflow:hidden;">
+      <img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/art/textures/art-texture-hero-background.webp" alt="" style="width:100%;height:100%;object-fit:cover;display:block;opacity:0.38;"></img>
+      <div style="position:absolute;inset:0;background:linear-gradient(120deg,rgba(28,22,32,0.9) 0%,rgba(28,22,32,0.35) 55%,rgba(55,32,59,0.45) 100%);"></div>
+    </div>
+  </section>
+
+  <!-- LIBRARY -->
+  <section style="padding:104px 64px;background:#f5f3ee;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px;flex-wrap:wrap;">
+      <div style="max-width:640px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#37203b;text-transform:uppercase;margin-bottom:14px;">Library</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:38px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 14px;">Four decades of writing</h2>
+        <p style="font-size:16px;line-height:1.6;color:#3a2f3b;margin:0;">Books, courses, articles, and conversations – resources for formation, mission, and discipleship. Everything here exists to help you follow Jesus more faithfully in your context.</p>
+      </div>
+      <a href="/library" style="font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#37203b;border-bottom:1.5px solid #37203b;padding-bottom:3px;flex-shrink:0;">Open the library →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:22px;">
+      <div><div style="aspect-ratio:2/3;margin-bottom:12px;box-shadow:0 10px 26px rgba(55,32,59,0.12);overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/books/the-forgotten-ways.webp" alt="The Forgotten Ways cover" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div><div style="font-family:Newsreader,serif;font-weight:600;font-size:13.5px;line-height:1.4;">The Forgotten Ways: Reactivating Apostolic Movements</div></div>
+      <div><div style="aspect-ratio:2/3;margin-bottom:12px;box-shadow:0 10px 26px rgba(55,32,59,0.12);overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/books/5q.webp" alt="5Q cover" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div><div style="font-family:Newsreader,serif;font-weight:600;font-size:13.5px;line-height:1.4;">5Q: Reactivating the Original Intelligence and Capacity of the Body of Christ</div></div>
+      <div><div style="aspect-ratio:2/3;margin-bottom:12px;box-shadow:0 10px 26px rgba(55,32,59,0.12);overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/books/on-the-verge.webp" alt="On the Verge cover" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div><div style="font-family:Newsreader,serif;font-weight:600;font-size:13.5px;line-height:1.4;">On the Verge: A Journey into the Apostolic Future of the Church</div></div>
+      <div><div style="aspect-ratio:2/3;margin-bottom:12px;box-shadow:0 10px 26px rgba(55,32,59,0.12);overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/books/metanoia.webp" alt="Metanoia cover" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div><div style="font-family:Newsreader,serif;font-weight:600;font-size:13.5px;line-height:1.4;">Metanoia: How God Radically Transforms People, Churches, and Organizations From the Inside Out</div></div>
+      <div><div style="aspect-ratio:2/3;margin-bottom:12px;box-shadow:0 10px 26px rgba(55,32,59,0.12);overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/books/reframation.webp" alt="ReFramation cover" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div><div style="font-family:Newsreader,serif;font-weight:600;font-size:13.5px;line-height:1.4;">ReFramation: Seeing God, People, and Mission through Re-enchanted Frames</div></div>
+      <div><div style="aspect-ratio:2/3;margin-bottom:12px;box-shadow:0 10px 26px rgba(55,32,59,0.12);overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/books/rejesus.webp" alt="ReJesus cover" style="width:100%;height:100%;object-fit:cover;display:block;"></img></div><div style="font-family:Newsreader,serif;font-weight:600;font-size:13.5px;line-height:1.4;">ReJesus: A Wild Messiah for a Missional Church</div></div>
+    </div>
+  </section>
+
+  <!-- FORMATION -->
+  <section style="padding:104px 64px;background:#fbf9f4;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px;flex-wrap:wrap;">
+      <div style="max-width:640px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#37203b;text-transform:uppercase;margin-bottom:14px;">Formation</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:38px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 14px;">Go deeper through formation</h2>
+        <p style="font-size:16px;line-height:1.65;color:#3a2f3b;margin:0;max-width:36em;">Some ideas are understood only by living with them. Move beyond a single conversation or practice into sustained pathways of reading, experimentation, reflection, and shared learning.</p>
+      </div>
+      <a href="/formation" style="font-size:13px;font-weight:700;letter-spacing:0.04em;text-transform:uppercase;color:#37203b;border-bottom:1.5px solid #37203b;padding-bottom:3px;flex-shrink:0;">All formations →</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;">
+      <div style="background:#f5f3ee;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:10px;align-items:center;"><span style="background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">COURSE</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;letter-spacing:0.04em;">8 WEEKS</span></div>
+        <div style="font-family:Newsreader,serif;font-weight:700;font-size:21px;">mDNA</div>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">The risen Christ coded six elements into his church – an irreducible pattern that, when recovered, releases the kind of movement we read about in Acts. Discover the missional DNA already within you.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:14px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12.5px;color:#6f6370;">Enrollment opens soon</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;font-weight:700;letter-spacing:0.04em;">COMING SOON</span></div>
+      </div>
+      <div style="background:#f5f3ee;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:10px;align-items:center;"><span style="background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">COURSE</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;letter-spacing:0.04em;">8 WEEKS</span></div>
+        <div style="font-family:Newsreader,serif;font-weight:700;font-size:21px;">Metanoia</div>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Repentance goes deeper than behavior change – it is the renovation of imagination, the reorientation of an entire life toward the reign of Christ. This pathway walks you into that transformation.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:14px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12.5px;color:#6f6370;">Enrollment opens soon</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;font-weight:700;letter-spacing:0.04em;">COMING SOON</span></div>
+      </div>
+      <div style="background:#f5f3ee;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:10px;align-items:center;"><span style="background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">COURSE</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;letter-spacing:0.04em;">8 WEEKS</span></div>
+        <div style="font-family:Newsreader,serif;font-weight:700;font-size:21px;">Reframation</div>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Recover the Hebraic worldview behind the New Testament and rediscover the gospel as Jesus announced it – holistic, embodied, and alive with kingdom meaning.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:14px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12.5px;color:#6f6370;">Enrollment opens soon</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;font-weight:700;letter-spacing:0.04em;">COMING SOON</span></div>
+      </div>
+      <div style="background:#f5f3ee;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:10px;align-items:center;"><span style="background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">COURSE</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;letter-spacing:0.04em;">8 WEEKS</span></div>
+        <div style="font-family:Newsreader,serif;font-weight:700;font-size:21px;">Discipleship</div>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Every movement in history began with disciples following Jesus and making more disciples. Rediscover discipleship as the simple, reproducible, and lived center of everything the church is meant to be.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:14px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12.5px;color:#6f6370;">Enrollment opens soon</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;font-weight:700;letter-spacing:0.04em;">COMING SOON</span></div>
+      </div>
+      <div style="background:#f5f3ee;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:10px;align-items:center;"><span style="background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">COURSE</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;letter-spacing:0.04em;">8 WEEKS</span></div>
+        <div style="font-family:Newsreader,serif;font-weight:700;font-size:21px;">Movement Intelligence</div>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">The kingdom of God moves through networks, neighborhoods, and systems – often underground, always unstoppable. Discover the patterns of how Christ's movement grows and what our role is within it.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:14px;display:flex;justify-content:space-between;align-items:center;"><span style="font-size:12.5px;color:#6f6370;">Enrollment opens soon</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;font-weight:700;letter-spacing:0.04em;">COMING SOON</span></div>
+      </div>
+      <div style="background:#f5f3ee;border-radius:14px;padding:26px 28px;display:flex;flex-direction:column;gap:14px;">
+        <div style="display:flex;gap:10px;align-items:center;"><span style="background:#e4d4e6;color:#37203b;padding:5px 12px;border-radius:9999px;font-size:11px;font-weight:700;letter-spacing:0.04em;">PRACTICE</span><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;letter-spacing:0.04em;">ONE WEEK</span></div>
+        <div style="font-family:Newsreader,serif;font-weight:700;font-size:21px;">APEST</div>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a2f3b;margin:0;flex:1;">Bring your 5Q report into the place you actually live. One practice, one week, one honest debrief – then a record of what happened that you can hand to your team.</p>
+        <div style="border-top:1px solid #e4e2dd;padding-top:14px;display:flex;justify-content:space-between;align-items:center;"><a href="/apest-local" style="font-size:13px;font-weight:700;color:#37203b;">Open APEST Local →</a><span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;font-weight:700;letter-spacing:0.04em;">AVAILABLE</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PULL QUOTE -->
+  <section style="padding:96px 24px;background:#ebe8e3;text-align:center;">
+    <div style="max-width:760px;margin:0 auto;">
+      <p style="font-family:Newsreader,serif;font-style:italic;font-size:30px;line-height:1.5;color:#241f26;margin:0 0 24px;">"Everything the church needs for movement is already within it – placed there by the risen Jesus, waiting to be remembered."</p>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#6f6370;text-transform:uppercase;">— Alan Hirsch</div>
+    </div>
+  </section>
+
+  <!-- A WORD FROM ALAN -->
+  <section style="padding:104px 24px;background:#fbf9f4;">
+    <div style="max-width:700px;margin:0 auto;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#6f6370;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:28px;"><span style="width:18px;height:1px;background:#6f6370;display:inline-block;"></span>A word from Alan</div>
+      <div style="font-family:Newsreader,serif;font-size:19px;line-height:1.75;color:#241f26;display:flex;flex-direction:column;gap:22px;">
+        <p style="margin:0;">For decades I've been trying to understand what allows the church to recover its movemental nature—and what helps ordinary people participate in it. This site gathers that work in one place, not simply so it can be studied, but so it can be practiced.</p>
+        <p style="margin:0;">Wander through the ideas, follow your curiosity, ask what rises up in you. Then take something small into your own street, team, or congregation and see what happens.</p>
+        <p style="margin:0;">This platform grows through generosity. Subscribing joins you to the mission, fueling the ongoing work that lets me keep serving leaders and movements freely, everywhere they're found.</p>
+        <p style="margin:0;font-weight:600;">Come in, dig deep, and help develop the movement that Jesus started together.</p>
+      </div>
+      <div style="display:flex;gap:14px;align-items:center;margin-top:36px;flex-wrap:wrap;">
+        <a href="/about" style="border:1.5px solid #c9bdca;color:#1b1c19;padding:14px 26px;border-radius:9999px;font-weight:600;font-size:15px;" style-hover="border-color:#37203b;">Read Alan's full story</a>
+        <a href="/guides" style="font-size:14px;font-weight:700;color:#37203b;">Start with a real situation →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section style="padding:104px 64px;background:#f0eee9;display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;align-items:center;">
+    <div style="aspect-ratio:3/4;background:#f0eee9;box-shadow:0 20px 50px rgba(55,32,59,0.14);overflow:hidden;"><img src="https://vhaiiiykcukrlyvwlgip.supabase.co/storage/v1/object/public/media-library/alan-hirsch/headshots/alan-hero-4x5.webp" alt="Alan Hirsch" style="width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;"></img></div>
+    <div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#37203b;text-transform:uppercase;margin-bottom:14px;">About Alan Hirsch</div>
+      <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:34px;line-height:1.15;letter-spacing:-0.01em;margin:0 0 20px;">About Alan Hirsch</h2>
+      <p style="font-size:16px;line-height:1.75;color:#2a2426;margin:0 0 32px;max-width:42em;">Alan Hirsch is known for helping the church recover its apostolic nature – and rediscover movement as its native expression. His work centers on a Christological conviction: the risen Christ already coded into his church everything it needs for movement. Our task is recovery, not invention. From leading a missional community in Melbourne's inner city to shaping networks across six continents, Alan's journey reflects the theology he teaches – lived practice inseparable from deep reflection. His current work focuses on translating four decades of frameworks, writing, and teaching into formational resources that equip leaders wherever they are.</p>
+      <div style="display:flex;gap:0;margin-bottom:32px;">
+        <div style="padding-right:28px;">
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:30px;">13</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6f6370;text-transform:uppercase;">Books</div>
+        </div>
+        <div style="border-left:1px solid #d8d1d9;padding:0 28px;">
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:30px;">40+</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6f6370;text-transform:uppercase;">Years</div>
+        </div>
+        <div style="border-left:1px solid #d8d1d9;padding:0 28px;">
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:30px;">6</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6f6370;text-transform:uppercase;">Continents</div>
+        </div>
+        <div style="border-left:1px solid #d8d1d9;padding-left:28px;">
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:30px;">4</div>
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#6f6370;text-transform:uppercase;">Orgs founded</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:20px;align-items:center;">
+        <a href="/about" style="border:1.5px solid #c9bdca;color:#1b1c19;padding:13px 26px;border-radius:9999px;font-weight:600;font-size:14.5px;" style-hover="border-color:#37203b;">Read full bio</a>
+        <a href="/library" style="font-size:14px;font-weight:700;color:#37203b;">View books →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER + JOIN -->
+  <section style="padding:104px 24px 96px;background:#fbf9f4;">
+    <div style="max-width:760px;margin:0 auto 48px;background:#f0eee9;border-radius:9999px;padding:18px 32px;display:flex;align-items:center;gap:16px;justify-content:center;text-align:center;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="flex-shrink:0;"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4Z" stroke="#37203b" stroke-width="1.6"></path><path d="M18 4h2v16h-2" stroke="#37203b" stroke-width="1.6"></path></svg>
+      <span style="font-size:14px;color:#3a2f3b;">Subscribe and receive the mDNA Field Guide — a visual companion to the six elements of apostolic genius, with reflection questions for your team.</span>
+    </div>
+    <div style="max-width:640px;margin:0 auto;text-align:center;">
+      <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:36px;margin:0 0 20px;">Stay in the conversation</h2>
+      <p style="font-size:16px;line-height:1.7;color:#3a2f3b;margin:0 0 28px;">A weekly letter with fresh writing on mission, formation, and the Christ-shaped life – plus frameworks and practices you can bring to your community.</p>
+      <p style="font-size:13px;color:#6f6370;margin:0 0 24px;">One list — delivered by Substack. The permanent archive lives on this platform.</p>
+      <div style="text-align:left;max-width:460px;margin:0 auto 20px;">
+        <label style="font-size:13px;font-weight:600;display:block;margin-bottom:8px;">Email</label>
+        <div style="display:flex;gap:10px;">
+          <input type="email" placeholder="you@example.com" style="flex:1;border:1.5px solid #d8d1d9;border-radius:8px;padding:13px 16px;font-size:14px;font-family:Manrope,sans-serif;outline:none;background:#fefcf8;color:#1b1c19;"></input>
+          <button style="background:#37203b;color:#fbf9f4;border:none;padding:13px 24px;border-radius:8px;font-weight:700;font-size:14px;cursor:pointer;white-space:nowrap;">Get the field guide</button>
+        </div>
+      </div>
+      <a href="#" style="font-size:13.5px;font-weight:600;text-decoration:underline;display:inline-block;margin-bottom:14px;">Browse the on-platform archive</a>
+      <p style="font-size:12.5px;color:#6f6370;margin:0;">By subscribing, you agree to our <a href="#" style="text-decoration:underline;">Privacy Policy</a>.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#37203b;color:#fbf9f4;padding:64px 64px 32px;">
+    <div style="display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;">
+      <div>
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+          <div style="width:34px;height:34px;border-radius:50%;background:#fbf9f4;color:#37203b;display:flex;align-items:center;justify-content:center;font-family:Newsreader,serif;font-weight:700;font-size:15px;">A</div>
+          <span style="font-family:Manrope,sans-serif;font-weight:800;font-size:14px;letter-spacing:0.04em;">ALAN HIRSCH</span>
+        </div>
+        <p style="font-size:13px;line-height:1.6;color:#d9cddb;margin:0 0 10px;max-width:260px;">Reactivating Apostolic Movements in our Time</p>
+        <a href="#" style="font-size:13px;color:#c9b9cb;">info@alanhirsch.org</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#a693a8;text-transform:uppercase;margin-bottom:6px;">Explore</div>
+        <a href="/themes" style="font-size:13.5px;color:#e4d9e5;">Themes</a>
+        <a href="/library" style="font-size:13.5px;color:#e4d9e5;">Library</a>
+        <a href="/guides" style="font-size:13.5px;color:#e4d9e5;">Practices</a>
+        <a href="/formation" style="font-size:13.5px;color:#e4d9e5;">Formation</a>
+        <a href="#" style="font-size:13.5px;color:#e4d9e5;">Assessments</a>
+        <a href="/ai-lab" style="font-size:13.5px;color:#e4d9e5;">AI Lab</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#a693a8;text-transform:uppercase;margin-bottom:6px;">Resources</div>
+        <a href="/about" style="font-size:13.5px;color:#e4d9e5;">About Alan Hirsch</a>
+        <a href="#" style="font-size:13.5px;color:#e4d9e5;">Pricing</a>
+        <a href="#" style="font-size:13.5px;color:#e4d9e5;">Newsletter</a>
+        <a href="#" style="font-size:13.5px;color:#e4d9e5;">Contact</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.08em;color:#a693a8;text-transform:uppercase;margin-bottom:6px;">Organizations</div>
+        <a href="#" style="font-size:13.5px;color:#e4d9e5;">5Q Collective</a>
+        <a href="#" style="font-size:13.5px;color:#e4d9e5;">100 Movements</a>
+        <a href="#" style="font-size:13.5px;color:#e4d9e5;">Forge Mission Training Network</a>
+        <a href="#" style="font-size:13.5px;color:#e4d9e5;">Movement Leaders Collective</a>
+        <a href="#" style="font-size:13.5px;color:#f0e6f1;font-weight:600;">All organizations →</a>
+      </div>
+    </div>
+    <div style="border-top:1px solid #543a58;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <span style="font-size:12px;color:#a693a8;">© 2026 Alan Hirsch. Equipping leaders for missional movement. All rights reserved.</span>
+      <div style="display:flex;gap:22px;">
+        <a href="#" style="font-size:12px;color:#a693a8;">Privacy</a>
+        <a href="#" style="font-size:12px;color:#a693a8;">Terms</a>
+        <a href="#" style="font-size:12px;color:#a693a8;">Cookies</a>
+        <a href="#" style="font-size:12px;color:#a693a8;">Accessibility</a>
+      </div>
+      <span style="font-size:12px;color:#9fb0bb;display:flex;align-items:center;gap:8px;">▲ Part of the Movemental network</span>
+    </div>
+  </footer>
+
+  <!-- FLOATING WIDGET -->
+  <div style="position:fixed;bottom:26px;right:26px;display:flex;flex-direction:column;align-items:center;gap:10px;">
+    <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.08em;color:#6f6370;">AI</span>
+    <div style="width:40px;height:40px;border-radius:50%;background:#fefcf8;box-shadow:0 6px 20px rgba(55,32,59,0.18);display:flex;align-items:center;justify-content:center;">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M4 4h11a3 3 0 0 1 3 3v13H7a3 3 0 0 1-3-3V4Z" stroke="#37203b" stroke-width="1.6"></path></svg>
+    </div>
+    <div style="width:56px;height:56px;border-radius:50%;background:#37203b;box-shadow:0 10px 28px rgba(55,32,59,0.32);display:flex;align-items:center;justify-content:center;cursor:pointer;" style-hover="background:#4e3652;">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6L12 3Z" fill="#fbf9f4"></path></svg>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;ownsApestLocal&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero states&quot;},&quot;fieldEntryCount&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:3,&quot;min&quot;:0,&quot;max&quot;:120,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Hero states&quot;},&quot;showHandAccent&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Hero states&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const count = this.props.fieldEntryCount ?? 3;
+    return {
+      showResume: this.props.ownsApestLocal ?? false,
+      showAccent: this.props.showHandAccent ?? false,
+      showProof: count >= 20,
+      proofText: "Entry 041 · posted Tuesday from Nashville"
+    };
+  }
+}
+</script>
+</body>
+</html>

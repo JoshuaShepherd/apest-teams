@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;1,6..72,400&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:#fbf9f4; color:#1b1c19; font-family:'Manrope',system-ui,sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  * { box-sizing: border-box; }
+  a { color:#4e3652; text-decoration:none; }
+  a:hover { color:#37203b; }
+  ::selection { background:#fad8fc; }
+</style>
+</helmet>
+
+<div data-screen-label="APEST Teams — Coming Soon" style="background:#fbf9f4;color:#1b1c19;font-family:Manrope,sans-serif;min-height:100vh;">
+
+  <!-- NETWORK BAND -->
+  <div style="background:#37203b;padding:11px 32px;">
+    <div style="max-width:1180px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;justify-content:space-between;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#e6dbe7;">Movemental · Alan Hirsch · APEST Teams</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#b49bb6;">In development · preview</div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <div style="background:#fefcf8;border-bottom:1px solid #e4e2dd;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <a href="/" style="font-family:Newsreader,serif;font-weight:700;font-size:19px;color:#37203b;">Alan Hirsch</a>
+    <nav style="display:flex;gap:26px;align-items:center;font-size:13.5px;font-weight:600;">
+      <a href="/themes/apest" style="color:#3a2f3b;">The APEST theme</a>
+      <a href="https://5qcentral.com/tests/" target="_blank" rel="noopener" style="color:#3a2f3b;">5Q Assessment ↗</a>
+      <a href="#notify" style="color:#37203b;border-bottom:1.5px solid #37203b;padding-bottom:2px;">Get notified</a>
+    </nav>
+  </div>
+
+  <!-- HERO -->
+  <section style="padding:clamp(60px,8vw,104px) 32px clamp(56px,7vw,88px);background:#fefcf8;border-bottom:1px solid #e4e2dd;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:clamp(40px,6vw,72px);align-items:start;">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:22px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#37203b;flex-shrink:0;"></span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#37203b;">Coming soon · APEST Teams</span>
+        </div>
+        <h1 style="font-family:Newsreader,serif;font-weight:700;font-size:clamp(34px,5vw,54px);line-height:1.12;letter-spacing:-0.02em;color:#241f26;margin:0 0 24px;max-width:22ch;text-wrap:pretty">A group has a fivefold pattern. Now you can read it.</h1>
+        <p style="font-size:17px;line-height:1.7;color:#3a2f3b;margin:0 0 18px;max-width:54ch;text-wrap:pretty">Each person in your group already holds a 5Q report naming their vocational pattern across the five functions Christ gave his Body. APEST Teams reads those reports as a set. Nobody fills in a new questionnaire. Nobody submits a colleague's results. The output is one document — every participant reads the identical report.</p>
+        <p style="font-size:15px;line-height:1.7;color:#6f6370;margin:0 0 32px;max-width:52ch;">APEST Teams is not open yet. This page is the honest preview: what the report reads, what your team will need ready before it opens, and three things it will not do.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+          <a href="#notify" style="background:#37203b;color:#fbf9f4;padding:15px 30px;border-radius:9999px;font-weight:700;font-size:15px;display:flex;align-items:center;gap:10px;" style-hover="background:#4e3652;" style-focus="outline:2px solid #37203b;outline-offset:3px;">Notify me when it opens <span>→</span></a>
+          <a href="/themes/apest" style="font-size:14px;font-weight:700;color:#4e3652;border-bottom:1.5px solid #cec3cc;padding-bottom:3px;" style-hover="border-color:#37203b;">Read the APEST theme</a>
+        </div>
+      </div>
+
+      <!-- SPECIMEN CARD -->
+      <div style="background:#f0eee9;border-radius:16px;padding:clamp(26px,3vw,38px);position:relative;overflow:hidden;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:18px;">Sample finding</div>
+        <p style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(22px,2.6vw,30px);line-height:1.28;color:#37203b;margin:0 0 22px;text-wrap:pretty">Four of your five leaders lead by <em style="color:#4e3652;">tending</em>. Nobody here is charged with <em style="color:#4e3652;">going</em>.</p>
+        <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0 0 26px;">This came from five scores and a page of arithmetic — not a workshop, not an impression.</p>
+        <div style="border-top:1px solid #dcd6d2;padding-top:22px;display:flex;flex-direction:column;gap:14px;">
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;width:76px;">Shepherding</span>
+            <span style="height:8px;border-radius:9999px;background:#37203b;"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;">4 / 5</span>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;width:76px;">Teaching</span>
+            <span style="height:8px;border-radius:9999px;background:linear-gradient(to right,#4e3652 62%,#dcd6d2 62%);"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;">3 / 5</span>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;width:76px;">Prophetic</span>
+            <span style="height:8px;border-radius:9999px;background:linear-gradient(to right,#4e3652 22%,#dcd6d2 22%);"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#37203b;">1 / 5</span>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;width:76px;">Evangelistic</span>
+            <span style="height:8px;border-radius:9999px;background:#dcd6d2;"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a8a99;">0 / 5</span>
+          </div>
+          <div style="display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;">
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#6f6370;width:76px;">Apostolic</span>
+            <span style="height:8px;border-radius:9999px;background:#dcd6d2;"></span>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#9a8a99;">0 / 5</span>
+          </div>
+        </div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#9a8a99;margin-top:24px;">Illustrative team of five · not a live report</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="padding:clamp(64px,7vw,100px) 32px;background:#ebe8e3;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="max-width:680px;margin-bottom:48px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#37203b;text-transform:uppercase;margin-bottom:14px;">How it works</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:clamp(28px,3.6vw,38px);line-height:1.15;letter-spacing:-0.01em;margin:0 0 14px;">Three steps. One shared document.</h2>
+        <p style="font-size:16px;line-height:1.7;color:#3a2f3b;margin:0;">The process is designed so that no single participant has more information than another. One person opens the team and invites the group. Each participant attaches their own existing 5Q report. Everyone reads the same output.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:22px;">
+        <div style="background:#fefcf8;border-radius:14px;padding:30px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#9a8a99;margin-bottom:16px;">01</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:21px;line-height:1.25;margin:0 0 12px;">Open and invite</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0;">One person opens a team and invites between three and twelve participants. No other setup is required at this stage. Participants receive a link; they do not need to coordinate with each other before joining.</p>
+        </div>
+        <div style="background:#fefcf8;border-radius:14px;padding:30px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#9a8a99;margin-bottom:16px;">02</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:21px;line-height:1.25;margin:0 0 12px;">Attach your own report</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0;">Each participant attaches the 5Q report they already hold from 5Q Central. Nobody fills in a new assessment here, and nobody submits or sees another person's report. Each person brings only what is already theirs.</p>
+        </div>
+        <div style="background:#fefcf8;border-radius:14px;padding:30px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#9a8a99;margin-bottom:16px;">03</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:21px;line-height:1.25;margin:0 0 12px;">Read together</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0;">When all reports are in, every participant receives the identical document. There is no manager's edition, no private scoring, no ranking. The report is written to be read by the whole group at once.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S IN THE REPORT -->
+  <section id="report" style="padding:clamp(64px,7vw,104px) 32px;background:#fbf9f4;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="max-width:700px;margin-bottom:48px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#37203b;text-transform:uppercase;margin-bottom:14px;">The report</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:clamp(28px,3.6vw,38px);line-height:1.15;letter-spacing:-0.01em;margin:0 0 14px;">Six movements, each labeled by how it was derived.</h2>
+        <p style="font-size:16px;line-height:1.7;color:#3a2f3b;margin:0;">The report does not mix arithmetic with argument without telling you which is which. Each section carries a label — transcribed, computed, interpreted, or assigned — so you can see exactly what kind of claim you are reading.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:2px;border-radius:14px;overflow:hidden;">
+        <div style="background:#f0eee9;padding:32px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:12px;">Transcribed</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:20px;margin:0 0 10px;">The ledger</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0;">Each person's five scores as they appear in their own 5Q report, with dates, transcribed without alteration. This is the raw material everything else is built from.</p>
+        </div>
+        <div style="background:#f0eee9;padding:32px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:12px;">Computed</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:20px;margin:0 0 10px;">Coverage</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0;">A computed reading of which functions are held strongly across the group, which are held thinly, and which nobody in the room carries at any meaningful level.</p>
+        </div>
+        <div style="background:#f0eee9;padding:32px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:12px;">Computed</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:20px;margin:0 0 10px;">Concentration</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0;">A computed reading of whether this group represents a real ecology of functions or four variations of the same instinct. Concentration is different from coverage — and often more diagnostic.</p>
+        </div>
+        <div style="background:#f0eee9;padding:32px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:12px;">Interpreted</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:20px;margin:0 0 10px;">Where authority sits</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0;">An interpreted reading of which function decision-making in this group tends to defer to — and which function can be consistently ignored without anyone noticing.</p>
+        </div>
+        <div style="background:#f0eee9;padding:32px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:12px;">Interpreted</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:20px;margin:0 0 10px;">What this pattern produces</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0;">An interpreted reading of the predictable fruit this configuration tends to generate, and the predictable blind spot it tends to carry. Both are named plainly.</p>
+        </div>
+        <div style="background:#f0eee9;padding:32px 28px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:12px;">Assigned</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:20px;margin:0 0 10px;">One thing to try</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0;">A single thirty-day practice aimed at the group's thinnest function, with a debrief question. One assignment, not a program. The report does not prescribe beyond this.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU'LL NEED + WHAT IT IS NOT -->
+  <section style="background:#1c1620;padding:clamp(64px,7vw,100px) 32px;">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(40px,5vw,72px);">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#b09fb3;text-transform:uppercase;margin-bottom:16px;">Before it opens</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:clamp(28px,3.4vw,36px);line-height:1.15;color:#fefcf8;margin:0 0 18px;">The one thing worth doing now: take the 5Q Assessment.</h2>
+        <p style="font-size:16px;line-height:1.7;color:#c9bdca;margin:0 0 26px;max-width:48ch;">APEST Teams reads the 5Q reports participants already hold. The assessment lives at 5Q Central — independent, connected to the 5Q work but not run from here. Each participant needs their own report. If people in your group have not yet taken the assessment, that is the one concrete step available now.</p>
+        <a href="https://5qcentral.com/tests/" target="_blank" rel="noopener" style="background:#e4d4e6;color:#241f26;padding:15px 28px;border-radius:9999px;font-weight:700;font-size:15px;display:inline-flex;align-items:center;gap:10px;" style-hover="background:#fefcf8;" style-focus="outline:2px solid #e4d4e6;outline-offset:3px;">Take the 5Q Assessment <span>↗</span></a>
+        <p style="font-size:13px;line-height:1.6;color:#b09fb3;margin:18px 0 0;max-width:42ch;">5Q Central is an independent site. The assessment there is not operated by this platform.</p>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#b09fb3;text-transform:uppercase;margin-bottom:16px;">What it is not</div>
+        <div style="display:flex;flex-direction:column;gap:22px;">
+          <div style="border-left:1px solid #4a3f4c;padding-left:20px;">
+            <div style="font-family:Newsreader,serif;font-size:19px;color:#fefcf8;margin-bottom:8px;">Not a hiring or performance instrument</div>
+            <p style="font-size:14.5px;line-height:1.65;color:#c9bdca;margin:0;">No participant is ranked, scored against another, or found wanting. The report reads a group's pattern, not the adequacy of its members. Using it to justify a personnel decision is a misuse of what it is designed to do.</p>
+          </div>
+          <div style="border-left:1px solid #4a3f4c;padding-left:20px;">
+            <div style="font-family:Newsreader,serif;font-size:19px;color:#fefcf8;margin-bottom:8px;">Not a personality workshop</div>
+            <p style="font-size:14.5px;line-height:1.65;color:#c9bdca;margin:0;">APEST describes functions Christ gave to his Body, not temperament types or psychological categories. The report reasons from Ephesians 4 and published work in that tradition. It is a theological diagnostic, not a self-understanding exercise.</p>
+          </div>
+          <div style="border-left:1px solid #4a3f4c;padding-left:20px;">
+            <div style="font-family:Newsreader,serif;font-size:19px;color:#fefcf8;margin-bottom:8px;">Not Alan Hirsch speaking</div>
+            <p style="font-size:14.5px;line-height:1.65;color:#c9bdca;margin:0;">The report reasons from published work and cites it, but it does not impersonate Alan or substitute for the community discernment and pastoral judgment that any reading of this kind requires.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPEN TODAY -->
+  <section style="padding:clamp(64px,7vw,100px) 32px;background:#f5f3ee;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="max-width:660px;margin-bottom:44px;">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#37203b;text-transform:uppercase;margin-bottom:14px;">Open today</div>
+        <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:clamp(28px,3.4vw,36px);line-height:1.15;margin:0 0 14px;">Two places to go while you wait.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px;">
+        <a href="/themes/apest" style="background:#fefcf8;border-radius:14px;padding:32px 30px;display:block;color:#1b1c19;" style-hover="background:#f0eee9;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:12px;">Theme · Fivefold ministry</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:22px;margin:0 0 10px;">The APEST framework</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0 0 16px;">The theological and practical case for recovering all five functions Christ gave his Body — apostolic, prophetic, evangelistic, shepherding, and teaching — drawn from the published work and its sources.</p>
+          <span style="font-size:13px;font-weight:700;color:#4e3652;">Read the APEST theme →</span>
+        </a>
+        <a href="https://5qcentral.com/tests/" target="_blank" rel="noopener" style="background:#fefcf8;border-radius:14px;padding:32px 30px;display:block;color:#1b1c19;" style-hover="background:#f0eee9;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:#9a8a99;margin-bottom:12px;">Assessment · 5Q Central</div>
+          <h3 style="font-family:Newsreader,serif;font-weight:700;font-size:22px;margin:0 0 10px;">Take the 5Q Assessment</h3>
+          <p style="font-size:14.5px;line-height:1.65;color:#3a3a36;margin:0 0 16px;">The individual vocational assessment that reads one person's pattern across the five functions. Participants will need this before APEST Teams can produce a team report. Operated independently at 5Q Central.</p>
+          <span style="font-size:13px;font-weight:700;color:#4e3652;">Go to 5Q Central ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTIFY -->
+  <section id="notify" style="padding:clamp(64px,7vw,104px) 32px;background:#fbf9f4;">
+    <div style="max-width:680px;margin:0 auto;text-align:center;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;color:#37203b;text-transform:uppercase;margin-bottom:16px;">Stay close</div>
+      <h2 style="font-family:Newsreader,serif;font-weight:700;font-size:clamp(28px,3.6vw,38px);line-height:1.15;margin:0 0 16px;">Be notified when APEST Teams opens.</h2>
+      <p style="font-size:16px;line-height:1.7;color:#3a2f3b;margin:0 0 32px;">We are opening first to a small number of real teams — groups already doing the work. The report needs to be argued with before it is published widely. We want teams who will push back on a finding, question a label, and tell us where the reasoning does not hold. If that is your team, leave your details.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:18px;">
+        <input type="email" placeholder="you@yourchurch.org" style="flex:1 1 260px;min-width:0;background:#fefcf8;border:1px solid #dcd6d2;border-radius:9999px;padding:15px 24px;font-size:15px;font-family:Manrope,sans-serif;color:#1b1c19;outline:none;" style-focus="border-color:#37203b;"></input>
+        <button onClick="{{ notify }}" style="background:#37203b;color:#fbf9f4;border:none;padding:15px 30px;border-radius:9999px;font-weight:700;font-size:15px;cursor:pointer;flex-shrink:0;" style-hover="background:#4e3652;">Notify me</button>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:22px;">
+        <sc-for list="{{ sizes }}" as="size" hint-placeholder-count="4">
+          <button onClick="{{ size.pick }}" style="background:{{ size.bg }};border:1px solid {{ size.border }};color:{{ size.color }};border-radius:9999px;padding:9px 18px;font-size:13px;font-family:'JetBrains Mono',monospace;cursor:pointer;">{{ size.label }}</button>
+        </sc-for>
+      </div>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <p style="font-size:14px;color:#37203b;font-weight:600;margin:0 0 12px;">We have your details. We will be in touch when a slot opens — no newsletters, no announcements.</p>
+      </sc-if>
+      <p style="font-size:12.5px;color:#6f6370;margin:0;">Your email is used only to notify you about APEST Teams. It will not be added to any mailing list.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#37203b;color:#fbf9f4;padding:56px 32px 32px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="display:flex;flex-wrap:wrap;gap:32px;justify-content:space-between;align-items:flex-start;margin-bottom:40px;">
+        <div style="max-width:380px;">
+          <div style="font-family:Newsreader,serif;font-weight:700;font-size:20px;margin-bottom:10px;">Alan Hirsch</div>
+          <p style="font-size:13.5px;line-height:1.7;color:#c9bdca;margin:0;">APEST Teams reads the fivefold pattern of a group — not individuals in isolation, but a body together.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px;">
+          <div style="font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:#b09fb3;">Start here</div>
+          <a href="/themes/apest" style="color:#e6dbe7;">The APEST theme</a>
+          <a href="https://5qcentral.com/tests/" target="_blank" rel="noopener" style="color:#e6dbe7;">The 5Q Assessment ↗</a>
+        </div>
+      </div>
+      <div style="border-top:1px solid #4e3652;padding-top:22px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.06em;color:#b09fb3;">© 2026 Alan Hirsch · Part of the Movemental network</div>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { sent: false, size: null };
+  renderVals() {
+    const labels = ["3–5 people", "6–8 people", "9–12 people", "Full range"];
+    const sizes = labels.map((label) => {
+      const on = this.state.size === label;
+      return {
+        label,
+        bg: on ? "#37203b" : "#fefcf8",
+        border: on ? "#37203b" : "#dcd6d2",
+        color: on ? "#fbf9f4" : "#4e3652",
+        pick: () => this.setState({ size: label }),
+      };
+    });
+    return { sizes, sent: this.state.sent, notify: () => this.setState({ sent: true }) };
+  }
+}
+</script>
+</body>
+</html>

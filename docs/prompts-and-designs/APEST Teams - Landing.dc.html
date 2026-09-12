@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;padding:0;background:hsl(43 47% 97%);}
+  *{box-sizing:border-box;}
+  a{color:hsl(291 30% 18%);text-decoration:none;}
+  a:hover{color:hsl(291 30% 28%);}
+  ::selection{background:hsl(293 26% 92%);}
+  @keyframes omRise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+  @keyframes omRule{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+  @keyframes omPulse{0%,100%{opacity:.3;transform:scale(1)}50%{opacity:1;transform:scale(1.35)}}
+  @keyframes omGrow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="min-height:100vh;background:hsl(43 47% 97%);color:hsl(80 6% 10%);font-family:Manrope,ui-sans-serif,system-ui,sans-serif;">
+
+  <div style="position:fixed;left:0;right:0;top:0;height:2px;z-index:60;pointer-events:none;">
+    <div ref="{{ progressRef }}" style="height:100%;width:0%;background:hsl(75 45% 14%);"></div>
+  </div>
+
+  <div style="border-bottom:1px solid hsl(43 11% 88%);background:hsl(43 19% 93% / .6);">
+    <div style="max-width:1240px;margin:0 auto;padding:8px 34px;display:flex;flex-wrap:wrap;align-items:center;gap:16px;">
+      <span style="font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:hsl(295 6% 41%);">/apest/teams</span>
+      <span style="margin-left:auto;font:400 11px/1.5 Manrope,sans-serif;color:hsl(295 6% 41%);">A separate organizational product. Not part of Alan Hirsch Membership.</span>
+    </div>
+  </div>
+
+  <header style="position:sticky;top:0;z-index:30;height:64px;border-bottom:1px solid hsl(43 11% 88% / .7);background:hsl(43 47% 97% / .92);backdrop-filter:saturate(1.4) blur(12px);">
+    <nav style="max-width:1240px;height:100%;margin:0 auto;padding:0 34px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;">
+      <div style="display:flex;align-items:center;gap:2px;min-width:0;justify-self:start;flex-wrap:wrap;">
+        <a href="Alan Hirsch Home v2.dc.html#themes" style="border-radius:9999px;padding:8px 14px;font:500 13px/1 Manrope,sans-serif;color:hsl(295 6% 41%);" style-hover="color:hsl(291 30% 18%)">Themes</a>
+        <a href="Alan Hirsch Home v2.dc.html#library" style="border-radius:9999px;padding:8px 14px;font:500 13px/1 Manrope,sans-serif;color:hsl(295 6% 41%);" style-hover="color:hsl(291 30% 18%)">Library</a>
+        <a href="#" style="border-radius:9999px;padding:8px 14px;font:500 13px/1 Manrope,sans-serif;color:hsl(75 45% 14%);background:hsl(75 45% 14% / .1);">APEST Teams</a>
+        <a href="Membership - Landing.dc.html" style="border-radius:9999px;padding:8px 14px;font:500 13px/1 Manrope,sans-serif;color:hsl(295 6% 41%);" style-hover="color:hsl(291 30% 18%)">Membership</a>
+      </div>
+      <a href="Alan Hirsch Home v2.dc.html" style="justify-self:center;font:600 19px/1 Newsreader,serif;letter-spacing:-.01em;color:hsl(80 6% 10%);white-space:nowrap;">Alan Hirsch</a>
+      <a href="#pricing" style="justify-self:end;background:hsl(75 45% 14%);color:hsl(40 75% 98%);border-radius:9999px;padding:11px 20px;font:600 12px/1 Manrope,sans-serif;white-space:nowrap;" style-hover="background:hsl(75 45% 20%);color:hsl(40 75% 98%)">Start a team</a>
+    </nav>
+  </header>
+
+  <section style="border-bottom:1px solid hsl(43 11% 88%);padding:76px 32px 84px;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:56px;align-items:center;">
+      <div style="min-width:0;animation:omRise .9s cubic-bezier(.2,.7,.2,1) both;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:26px;">
+          <span style="height:1px;width:32px;background:hsl(75 45% 14%);transform-origin:left;animation:omRule .9s cubic-bezier(.2,.7,.2,1) .2s both;"></span>
+          <span style="font:600 11px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.28em;color:hsl(295 6% 41%);">APEST Teams</span>
+        </div>
+        <h1 style="margin:0 0 26px;font:700 clamp(38px,5.4vw,66px)/1.04 Newsreader,serif;letter-spacing:-.02em;text-wrap:balance;">See the fivefold shape of <span style="font-weight:600;font-style:italic;color:hsl(75 45% 14%);">your whole team</span>.</h1>
+        <p style="margin:0 0 32px;max-width:46ch;font:400 19px/1.65 Manrope,sans-serif;color:hsl(295 6% 41%);text-wrap:pretty;">Individual APEST results tell you something about a person. APEST Teams brings those results together so you can see the ecology of the team itself—where gifts concentrate, where they are missing, and what that might mean for how the team actually leads.</p>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-bottom:28px;">
+          <a href="#pricing" style="background:hsl(75 45% 14%);color:hsl(40 75% 98%);border-radius:9999px;padding:16px 30px;font:600 14px/1 Manrope,sans-serif;box-shadow:0 16px 40px hsl(75 45% 14% / .22);" style-hover="background:hsl(75 45% 20%);color:hsl(40 75% 98%)">Start a team</a>
+          <a href="#how" style="border:1px solid hsl(75 45% 14%);color:hsl(75 45% 14%);border-radius:9999px;padding:16px 26px;font:600 14px/1 Manrope,sans-serif;" style-hover="background:hsl(75 45% 14% / .1)">See how it works</a>
+        </div>
+        <div style="border-top:1px solid hsl(43 11% 88%);padding-top:22px;">
+          <div style="font:600 clamp(26px,3vw,34px)/1.1 Newsreader,serif;">$499/year for up to 5 people</div>
+          <div style="margin-top:8px;font:600 14px/1.5 Manrope,sans-serif;color:hsl(295 6% 41%);">Additional members $79/year each</div>
+          <div style="margin-top:10px;font:400 13px/1.6 Manrope,sans-serif;color:hsl(295 6% 41%);">5Q assessments are purchased separately where required.</div>
+        </div>
+      </div>
+
+      <div style="min-width:0;">
+        <div style="border:1px solid hsl(43 11% 88%);border-radius:8px;background:hsl(40 75% 98%);box-shadow:0 24px 56px hsl(75 45% 14% / .14);overflow:hidden;">
+          <div style="border-bottom:1px solid hsl(43 11% 88%);padding:14px 20px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+            <span style="font:600 12px/1 Manrope,sans-serif;">Team map</span>
+            <span style="margin-left:auto;font:600 9px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:hsl(75 45% 14%);border:1px solid hsl(75 45% 14% / .4);border-radius:9999px;padding:6px 10px;">Illustrative team</span>
+          </div>
+          <div style="padding:26px 22px;display:grid;gap:16px;">
+            <div style="display:grid;grid-template-columns:7rem minmax(0,1fr) 3.2rem;gap:14px;align-items:center;">
+              <span style="font:500 13px/1.3 Manrope,sans-serif;">Apostolic</span>
+              <span style="height:10px;border-radius:9999px;background:hsl(43 19% 93%);display:block;"></span>
+              <span style="font:500 12px/1 'JetBrains Mono',monospace;color:hsl(295 6% 41%);text-align:right;">0 / 5</span>
+            </div>
+            <div style="display:grid;grid-template-columns:7rem minmax(0,1fr) 3.2rem;gap:14px;align-items:center;">
+              <span style="font:500 13px/1.3 Manrope,sans-serif;">Prophetic</span>
+              <span style="height:10px;border-radius:9999px;background:hsl(43 19% 93%);display:block;overflow:hidden;"><span style="display:block;height:10px;width:22%;border-radius:9999px;background:hsl(75 45% 14%);transform-origin:left;animation:omGrow 1.1s cubic-bezier(.2,.7,.2,1) .5s both;"></span></span>
+              <span style="font:500 12px/1 'JetBrains Mono',monospace;color:hsl(295 6% 41%);text-align:right;">1 / 5</span>
+            </div>
+            <div style="display:grid;grid-template-columns:7rem minmax(0,1fr) 3.2rem;gap:14px;align-items:center;">
+              <span style="font:500 13px/1.3 Manrope,sans-serif;">Evangelistic</span>
+              <span style="height:10px;border-radius:9999px;background:hsl(43 19% 93%);display:block;"></span>
+              <span style="font:500 12px/1 'JetBrains Mono',monospace;color:hsl(295 6% 41%);text-align:right;">0 / 5</span>
+            </div>
+            <div style="display:grid;grid-template-columns:7rem minmax(0,1fr) 3.2rem;gap:14px;align-items:center;">
+              <span style="font:500 13px/1.3 Manrope,sans-serif;">Shepherding</span>
+              <span style="height:10px;border-radius:9999px;background:hsl(43 19% 93%);display:block;overflow:hidden;"><span style="display:block;height:10px;width:100%;border-radius:9999px;background:hsl(75 45% 14%);transform-origin:left;animation:omGrow 1.1s cubic-bezier(.2,.7,.2,1) .2s both;"></span></span>
+              <span style="font:500 12px/1 'JetBrains Mono',monospace;color:hsl(295 6% 41%);text-align:right;">4 / 5</span>
+            </div>
+            <div style="display:grid;grid-template-columns:7rem minmax(0,1fr) 3.2rem;gap:14px;align-items:center;">
+              <span style="font:500 13px/1.3 Manrope,sans-serif;">Teaching</span>
+              <span style="height:10px;border-radius:9999px;background:hsl(43 19% 93%);display:block;overflow:hidden;"><span style="display:block;height:10px;width:62%;border-radius:9999px;background:hsl(75 45% 14%);transform-origin:left;animation:omGrow 1.1s cubic-bezier(.2,.7,.2,1) .35s both;"></span></span>
+              <span style="font:500 12px/1 'JetBrains Mono',monospace;color:hsl(295 6% 41%);text-align:right;">3 / 5</span>
+            </div>
+          </div>
+          <div style="border-top:1px solid hsl(43 11% 88%);background:hsl(43 19% 93% / .45);padding:16px 22px;font:400 12px/1.5 Manrope,sans-serif;color:hsl(295 6% 41%);">Illustrative team of five · not a live report</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:hsl(43 19% 93% / .55);border-bottom:1px solid hsl(43 11% 88%);padding:80px 32px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="max-width:44rem;margin-bottom:40px;">
+        <h2 style="margin:0 0 16px;font:600 clamp(28px,3.4vw,42px)/1.14 Newsreader,serif;text-wrap:balance;">Already taken 5Q? Bring the report.</h2>
+        <p style="margin:0;font:400 18px/1.7 Manrope,sans-serif;color:hsl(295 6% 41%);">APEST Teams begins with the existing assessment rather than asking people to start over.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;">
+        <div style="border:1px solid hsl(75 45% 14% / .35);border-radius:8px;background:hsl(40 75% 98%);padding:30px;display:flex;flex-direction:column;gap:14px;">
+          <h3 style="margin:0;font:500 22px/1.25 Newsreader,serif;">I already have a 5Q report</h3>
+          <p style="margin:0;font:400 15px/1.65 Manrope,sans-serif;color:hsl(295 6% 41%);">Bring the report you already hold. Each person attaches their own.</p>
+          <a href="#" style="margin-top:auto;background:hsl(75 45% 14%);color:hsl(40 75% 98%);border-radius:9999px;padding:14px 24px;font:600 13px/1 Manrope,sans-serif;text-align:center;" style-hover="background:hsl(75 45% 20%);color:hsl(40 75% 98%)">Upload report</a>
+        </div>
+        <div style="border:1px solid hsl(43 11% 88%);border-radius:8px;background:hsl(40 75% 98%);padding:30px;display:flex;flex-direction:column;gap:14px;">
+          <h3 style="margin:0;font:500 22px/1.25 Newsreader,serif;">I need an assessment</h3>
+          <p style="margin:0;font:400 15px/1.65 Manrope,sans-serif;color:hsl(295 6% 41%);">The assessment is operated independently at 5Q Central. Pricing is set there.</p>
+          <a href="https://5qcentral.com/tests/" style="margin-top:auto;border:1px solid hsl(75 45% 14%);color:hsl(75 45% 14%);border-radius:9999px;padding:14px 24px;font:600 13px/1 Manrope,sans-serif;text-align:center;" style-hover="background:hsl(75 45% 14% / .1)">Take 5Q ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" style="border-bottom:1px solid hsl(43 11% 88%);padding:80px 32px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="max-width:44rem;margin-bottom:44px;">
+        <h2 style="margin:0 0 16px;font:600 clamp(28px,3.4vw,42px)/1.14 Newsreader,serif;text-wrap:balance;">Five people become one team picture.</h2>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:32px;">
+        <span style="border:1px solid hsl(75 45% 14% / .4);background:hsl(75 45% 14% / .08);border-radius:9999px;padding:10px 16px;font:600 12px/1 Manrope,sans-serif;color:hsl(75 45% 14%);">Create team</span>
+        <span style="align-self:center;color:hsl(43 11% 78%);">→</span>
+        <span style="border:1px solid hsl(43 11% 88%);border-radius:9999px;padding:10px 16px;font:600 12px/1 Manrope,sans-serif;color:hsl(295 6% 41%);">Invite members</span>
+        <span style="align-self:center;color:hsl(43 11% 78%);">→</span>
+        <span style="border:1px solid hsl(43 11% 88%);border-radius:9999px;padding:10px 16px;font:600 12px/1 Manrope,sans-serif;color:hsl(295 6% 41%);">Upload / connect assessments</span>
+        <span style="align-self:center;color:hsl(43 11% 78%);">→</span>
+        <span style="border:1px solid hsl(43 11% 88%);border-radius:9999px;padding:10px 16px;font:600 12px/1 Manrope,sans-serif;color:hsl(295 6% 41%);">Reminders</span>
+        <span style="align-self:center;color:hsl(43 11% 78%);">→</span>
+        <span style="border:1px solid hsl(43 11% 88%);border-radius:9999px;padding:10px 16px;font:600 12px/1 Manrope,sans-serif;color:hsl(295 6% 41%);">Team ready</span>
+      </div>
+      <div style="border:1px solid hsl(43 11% 88%);border-radius:8px;background:hsl(40 75% 98%);overflow:hidden;box-shadow:0 20px 48px hsl(75 45% 14% / .1);">
+        <div style="border-bottom:1px solid hsl(43 11% 88%);padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+          <span style="font:600 12px/1 Manrope,sans-serif;">Team roster</span>
+          <span style="font:400 11px/1 Manrope,sans-serif;color:hsl(295 6% 41%);">5 of 5 seats</span>
+          <div style="margin-left:auto;display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="border:1px solid hsl(43 11% 88%);border-radius:9999px;padding:8px 13px;font:500 11px/1 Manrope,sans-serif;color:hsl(295 6% 41%);">Resend invite</span>
+            <span style="border:1px solid hsl(43 11% 88%);border-radius:9999px;padding:8px 13px;font:500 11px/1 Manrope,sans-serif;color:hsl(295 6% 41%);">Upload report</span>
+            <span style="border:1px solid hsl(75 45% 14%);background:hsl(75 45% 14% / .08);border-radius:9999px;padding:8px 13px;font:500 11px/1 Manrope,sans-serif;color:hsl(75 45% 14%);">Add member</span>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr) auto;gap:14px;padding:12px 20px;border-bottom:1px solid hsl(43 11% 88%);background:hsl(43 19% 93% / .4);font:600 9px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:hsl(295 6% 41%);">
+          <span>Person</span><span>Assessment</span><span>Invitation</span><span>Reminder</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr) auto;gap:14px;padding:16px 20px;border-bottom:1px solid hsl(43 11% 88%);align-items:center;">
+          <span style="display:flex;align-items:center;gap:10px;"><span style="width:26px;height:26px;border-radius:50%;background:hsl(43 19% 93%);"></span><span style="font:600 13px/1.3 Manrope,sans-serif;">Team leader</span></span>
+          <span style="font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:hsl(142 40% 26%);border:1px solid hsl(142 40% 26% / .4);border-radius:9999px;padding:6px 10px;justify-self:start;">Ready</span>
+          <span style="font:500 12px/1.4 Manrope,sans-serif;color:hsl(295 6% 41%);">Owner</span>
+          <span style="font:500 12px/1.4 Manrope,sans-serif;color:hsl(295 6% 41%);">—</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr) auto;gap:14px;padding:16px 20px;border-bottom:1px solid hsl(43 11% 88%);align-items:center;">
+          <span style="display:flex;align-items:center;gap:10px;"><span style="width:26px;height:26px;border-radius:50%;background:hsl(43 19% 93%);"></span><span style="font:500 13px/1.3 Manrope,sans-serif;color:hsl(295 6% 41%);">Participant 2</span></span>
+          <span style="font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:hsl(142 40% 26%);border:1px solid hsl(142 40% 26% / .4);border-radius:9999px;padding:6px 10px;justify-self:start;">Uploaded</span>
+          <span style="font:500 12px/1.4 Manrope,sans-serif;color:hsl(295 6% 41%);">Accepted</span>
+          <span style="font:500 12px/1.4 Manrope,sans-serif;color:hsl(295 6% 41%);">—</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr) auto;gap:14px;padding:16px 20px;border-bottom:1px solid hsl(43 11% 88%);align-items:center;">
+          <span style="display:flex;align-items:center;gap:10px;"><span style="width:26px;height:26px;border-radius:50%;background:hsl(43 19% 93%);"></span><span style="font:500 13px/1.3 Manrope,sans-serif;color:hsl(295 6% 41%);">Participant 3</span></span>
+          <span style="font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:hsl(75 45% 14%);border:1px solid hsl(75 45% 14% / .4);border-radius:9999px;padding:6px 10px;justify-self:start;">Report needed</span>
+          <span style="font:500 12px/1.4 Manrope,sans-serif;color:hsl(295 6% 41%);">Accepted</span>
+          <span style="font:600 12px/1.4 Manrope,sans-serif;color:hsl(75 45% 14%);">Send</span>
+        </div>
+        <div style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr) auto;gap:14px;padding:16px 20px;align-items:center;">
+          <span style="display:flex;align-items:center;gap:10px;"><span style="width:26px;height:26px;border-radius:50%;background:hsl(43 19% 93%);"></span><span style="font:500 13px/1.3 Manrope,sans-serif;color:hsl(295 6% 41%);">Participant 4</span></span>
+          <span style="font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:hsl(295 6% 41%);border:1px solid hsl(43 11% 80%);border-radius:9999px;padding:6px 10px;justify-self:start;">Invited</span>
+          <span style="display:inline-flex;align-items:center;gap:7px;font:500 12px/1.4 Manrope,sans-serif;color:hsl(295 6% 41%);"><span style="width:6px;height:6px;border-radius:50%;background:hsl(75 45% 14%);animation:omPulse 2s ease-in-out infinite;"></span>Pending</span>
+          <span style="font:600 12px/1.4 Manrope,sans-serif;color:hsl(75 45% 14%);">Send</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:hsl(43 19% 93% / .55);border-bottom:1px solid hsl(43 11% 88%);padding:80px 32px;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:start;">
+      <div style="min-width:0;">
+        <h2 style="margin:0 0 18px;font:600 clamp(28px,3.4vw,42px)/1.14 Newsreader,serif;text-wrap:balance;">See what the pattern may mean.</h2>
+        <p style="margin:0 0 24px;font:400 18px/1.7 Manrope,sans-serif;color:hsl(295 6% 41%);text-wrap:pretty;">APEST Teams can interpret the collective profile against the underlying framework and population benchmarks, helping a leader notice patterns that are difficult to see from five separate reports.</p>
+        <div style="display:grid;gap:10px;">
+          <div style="border-left:2px solid hsl(75 45% 14%);padding-left:14px;font:500 16px/1.5 Newsreader,serif;">Where might this team naturally excel?</div>
+          <div style="border-left:2px solid hsl(43 11% 82%);padding-left:14px;font:500 16px/1.5 Newsreader,serif;">What could it systematically overlook?</div>
+          <div style="border-left:2px solid hsl(43 11% 82%);padding-left:14px;font:500 16px/1.5 Newsreader,serif;">Where might leadership bottleneck?</div>
+          <div style="border-left:2px solid hsl(43 11% 82%);padding-left:14px;font:500 16px/1.5 Newsreader,serif;">Which voices may be carrying disproportionate weight?</div>
+        </div>
+      </div>
+      <div style="min-width:0;">
+        <div style="border:1px solid hsl(75 45% 14% / .3);border-radius:8px;background:hsl(40 75% 98%);padding:30px;">
+          <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:18px;">
+            <span style="font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:hsl(75 45% 14%);">Possible team pattern</span>
+            <span style="margin-left:auto;font:600 9px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:hsl(295 6% 41%);border:1px solid hsl(43 11% 80%);border-radius:9999px;padding:6px 10px;">Illustrative example</span>
+          </div>
+          <p style="margin:0 0 18px;font:400 21px/1.5 Newsreader,serif;text-wrap:pretty;">Four of five team members show strong Shepherding tendencies, while outward / Evangelistic capacity is comparatively low.</p>
+          <p style="margin:0;font:400 14px/1.65 Manrope,sans-serif;color:hsl(295 6% 41%);">Read as a pattern worth discussing, not a verdict on any person.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom:1px solid hsl(43 11% 88%);padding:80px 32px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="max-width:46rem;margin-bottom:40px;">
+        <h2 style="margin:0 0 16px;font:600 clamp(28px,3.4vw,42px)/1.14 Newsreader,serif;text-wrap:balance;">The dashboard should start conversations, not end them.</h2>
+        <p style="margin:0;font:400 18px/1.7 Manrope,sans-serif;color:hsl(295 6% 41%);text-wrap:pretty;">A team profile is not a verdict on five people. It is a shared object the team can look at together.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;">
+        <div style="border-top:2px solid hsl(75 45% 14%);padding-top:18px;">
+          <div style="margin-bottom:10px;font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:hsl(75 45% 14%);">Notice</div>
+          <p style="margin:0;font:400 16px/1.6 Manrope,sans-serif;color:hsl(295 6% 41%);">What stands out?</p>
+        </div>
+        <div style="border-top:2px solid hsl(43 11% 82%);padding-top:18px;">
+          <div style="margin-bottom:10px;font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:hsl(295 6% 41%);">Test</div>
+          <p style="margin:0;font:400 16px/1.6 Manrope,sans-serif;color:hsl(295 6% 41%);">Does this describe our lived experience?</p>
+        </div>
+        <div style="border-top:2px solid hsl(43 11% 82%);padding-top:18px;">
+          <div style="margin-bottom:10px;font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:hsl(295 6% 41%);">Discuss</div>
+          <p style="margin:0;font:400 16px/1.6 Manrope,sans-serif;color:hsl(295 6% 41%);">Where do we disagree?</p>
+        </div>
+        <div style="border-top:2px solid hsl(43 11% 82%);padding-top:18px;">
+          <div style="margin-bottom:10px;font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:hsl(295 6% 41%);">Act</div>
+          <p style="margin:0;font:400 16px/1.6 Manrope,sans-serif;color:hsl(295 6% 41%);">What do we want to change?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:hsl(43 19% 93% / .55);border-bottom:1px solid hsl(43 11% 88%);padding:80px 32px;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:center;">
+      <div style="min-width:0;">
+        <h2 style="margin:0 0 18px;font:600 clamp(28px,3.4vw,42px)/1.14 Newsreader,serif;text-wrap:balance;">Keep the team picture alive.</h2>
+        <p style="margin:0 0 14px;font:400 18px/1.7 Manrope,sans-serif;color:hsl(295 6% 41%);">Teams change. People join. Roles shift. Leadership develops.</p>
+        <p style="margin:0;font:400 17px/1.7 Manrope,sans-serif;color:hsl(295 6% 41%);text-wrap:pretty;">APEST Teams remains available as the team changes rather than producing a single report that disappears into a folder.</p>
+      </div>
+      <div style="min-width:0;border:1px solid hsl(43 11% 88%);border-radius:8px;background:hsl(40 75% 98%);padding:26px;">
+        <div style="margin-bottom:18px;font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:hsl(295 6% 41%);">Team timeline</div>
+        <div style="display:grid;gap:0;">
+          <div style="display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid hsl(43 11% 88%);">
+            <span style="width:9px;height:9px;flex:none;border-radius:50%;background:hsl(75 45% 14%);"></span>
+            <span style="font:600 14px/1.4 Manrope,sans-serif;">Current team</span>
+            <span style="margin-left:auto;font:400 11px/1 'JetBrains Mono',monospace;color:hsl(295 6% 41%);">live</span>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid hsl(43 11% 88%);">
+            <span style="width:9px;height:9px;flex:none;border-radius:50%;border:2px solid hsl(43 11% 80%);"></span>
+            <span style="font:500 14px/1.4 Manrope,sans-serif;color:hsl(295 6% 41%);">Member added</span>
+            <span style="margin-left:auto;font:400 11px/1 'JetBrains Mono',monospace;color:hsl(295 6% 41%);">—</span>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid hsl(43 11% 88%);">
+            <span style="width:9px;height:9px;flex:none;border-radius:50%;border:2px solid hsl(43 11% 80%);"></span>
+            <span style="font:500 14px/1.4 Manrope,sans-serif;color:hsl(295 6% 41%);">New report · updated interpretation</span>
+            <span style="margin-left:auto;font:600 9px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:hsl(295 6% 41%);border:1px solid hsl(43 11% 80%);border-radius:9999px;padding:5px 9px;">Planned</span>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;padding:14px 0;border-top:1px solid hsl(43 11% 88%);">
+            <span style="width:9px;height:9px;flex:none;border-radius:50%;border:2px solid hsl(43 11% 80%);"></span>
+            <span style="font:500 14px/1.4 Manrope,sans-serif;color:hsl(295 6% 41%);">Past team state</span>
+            <span style="margin-left:auto;font:600 9px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:hsl(295 6% 41%);border:1px solid hsl(43 11% 80%);border-radius:9999px;padding:5px 9px;">Planned</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom:1px solid hsl(43 11% 88%);padding:80px 32px;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:center;">
+      <div style="min-width:0;">
+        <h2 style="margin:0 0 18px;font:600 clamp(28px,3.4vw,42px)/1.14 Newsreader,serif;text-wrap:balance;">An assessment should not end with a PDF.</h2>
+      </div>
+      <div style="min-width:0;">
+        <p style="margin:0 0 14px;font:400 18px/1.7 Manrope,sans-serif;color:hsl(295 6% 41%);">The larger opportunity is what happens afterward: bringing individual results into real teams and helping those teams understand and work with the pattern they already contain.</p>
+        <p style="margin:0;font:400 14px/1.7 Manrope,sans-serif;color:hsl(295 6% 41%);">A participation figure for 5Q/APEST can appear here once 5Q confirms a number for public use.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" style="background:hsl(75 45% 14%);color:hsl(40 75% 98%);padding:80px 32px;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <h2 style="margin:0 0 44px;font:600 clamp(28px,3.4vw,42px)/1.14 Newsreader,serif;text-wrap:balance;">One team. One annual workspace.</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;align-items:start;">
+        <div style="border:1px solid hsl(40 75% 98% / .35);border-radius:8px;background:hsl(40 75% 98% / .07);padding:32px;display:flex;flex-direction:column;gap:16px;">
+          <span style="font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:hsl(40 75% 98% / .7);">Up to 5 people</span>
+          <div style="font:600 clamp(34px,4vw,48px)/1 Newsreader,serif;">$499/year</div>
+          <div style="border-top:1px solid hsl(40 75% 98% / .2);padding-top:16px;display:grid;gap:10px;font:400 15px/1.5 Manrope,sans-serif;color:hsl(40 75% 98% / .85);">
+            <div>Leader dashboard</div>
+            <div>Team invitations</div>
+            <div>Assessment import</div>
+            <div>Team visualization</div>
+            <div>AI-supported team interpretation</div>
+            <div>Team history / ongoing access where implemented</div>
+          </div>
+        </div>
+        <div style="border:1px solid hsl(40 75% 98% / .22);border-radius:8px;padding:32px;display:flex;flex-direction:column;gap:16px;">
+          <span style="font:600 10px/1 Manrope,sans-serif;text-transform:uppercase;letter-spacing:.16em;color:hsl(40 75% 98% / .7);">Additional members</span>
+          <div style="font:600 clamp(34px,4vw,48px)/1 Newsreader,serif;">$79/year each</div>
+          <p style="margin:0;font:400 15px/1.6 Manrope,sans-serif;color:hsl(40 75% 98% / .8);">Added to the same annual workspace.</p>
+          <div style="border-top:1px solid hsl(40 75% 98% / .2);padding-top:16px;font:600 15px/1.6 Manrope,sans-serif;">5Q assessments are not included.</div>
+        </div>
+      </div>
+      <div style="margin-top:36px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+        <a href="#" style="background:hsl(43 19% 93%);color:hsl(75 45% 14%);border-radius:9999px;padding:15px 28px;font:600 14px/1 Manrope,sans-serif;" style-hover="background:hsl(43 47% 97%);color:hsl(75 45% 14%)">Start APEST Teams</a>
+        <a href="https://5qcentral.com/tests/" style="border:1px solid hsl(40 75% 98% / .5);color:hsl(40 75% 98%);border-radius:9999px;padding:15px 26px;font:600 14px/1 Manrope,sans-serif;" style-hover="background:hsl(40 75% 98% / .12);color:hsl(40 75% 98%)">I need a 5Q assessment</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="border-bottom:1px solid hsl(43 11% 88%);padding:64px 32px;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:center;">
+      <div style="min-width:0;">
+        <h2 style="margin:0 0 14px;font:600 26px/1.2 Newsreader,serif;">APEST Teams is separate from Alan Hirsch Membership.</h2>
+        <p style="margin:0 0 8px;max-width:52ch;font:400 16px/1.7 Manrope,sans-serif;color:hsl(295 6% 41%);">Membership is an individual relationship with Alan's ongoing work.</p>
+        <p style="margin:0;max-width:52ch;font:400 16px/1.7 Manrope,sans-serif;color:hsl(295 6% 41%);">APEST Teams is organizational software for a real team.</p>
+      </div>
+      <div style="min-width:0;">
+        <a href="Membership - Landing.dc.html" style="border:1px solid hsl(291 30% 18%);color:hsl(291 30% 18%);border-radius:9999px;padding:14px 24px;font:600 14px/1 Manrope,sans-serif;display:inline-block;" style-hover="background:hsl(291 30% 18% / .1)">See Alan Hirsch Membership →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top:1px solid hsl(43 11% 88%);padding:40px 32px;">
+    <div style="max-width:1280px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;font:400 13px/1.5 Manrope,sans-serif;color:hsl(295 6% 41%);">
+      <span>© 2026 Alan Hirsch. Equipping leaders for missional movement</span>
+      <div style="display:flex;flex-wrap:wrap;gap:18px;">
+        <a href="Alan Hirsch Home v2.dc.html#themes">APEST theme</a>
+        <a href="https://5qcentral.com/tests/">5Q Central ↗</a>
+        <a href="Membership - Landing.dc.html">Membership</a>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:1000}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  progressRef = React.createRef();
+
+  componentDidMount(){
+    this.observe();
+    this.onScroll = () => {
+      if (this.pending) return;
+      this.pending = true;
+      requestAnimationFrame(() => {
+        this.pending = false;
+        const max = (document.documentElement.scrollHeight - window.innerHeight) || 1;
+        if (this.progressRef.current) this.progressRef.current.style.width = (Math.min(1, window.scrollY / max) * 100).toFixed(2) + '%';
+      });
+    };
+    window.addEventListener('scroll', this.onScroll, {passive:true});
+  }
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.onScroll);
+    if (this.io) this.io.disconnect();
+  }
+  observe(){
+    const root = this.rootRef.current;
+    if (!root || typeof IntersectionObserver === 'undefined') return;
+    this.io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        en.target.style.transition = 'opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1)';
+        en.target.style.opacity = '1';
+        en.target.style.transform = 'none';
+        this.io.unobserve(en.target);
+      });
+    }, {rootMargin:'-8% 0px -12% 0px'});
+    Array.from(root.querySelectorAll('section')).slice(1).forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(22px)'; this.io.observe(el);
+    });
+  }
+  renderVals(){
+    return {rootRef:this.rootRef, progressRef:this.progressRef};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+{
+  "team": {
+    "name": "Restoration Road Community Church",
+    "place": "Denver, CO",
+    "grain": "staff",
+    "seatCount": 5
+  },
+  "members": [
+    {
+      "memberId": "mem_marcus_webb_01",
+      "displayName": "Marcus Webb",
+      "displayRole": "Lead Pastor",
+      "tenureYears": 9,
+      "staffOrVolunteer": "staff",
+      "formalAuthority": true,
+      "reportDate": "2025-06-14",
+      "profile": {
+        "schemaVersion": 1,
+        "source": "fiveq_vocational_pdf",
+        "reportDate": "2025-06-14",
+        "scaleMax": 50,
+        "subjectNameOnReport": "Marcus Webb",
+        "primary": "apostle",
+        "secondary": "teacher",
+        "scores": {
+          "apostle": { "score": 46, "max": 50, "rank": 1, "role": "primary" },
+          "teacher": { "score": 35, "max": 50, "rank": 2, "role": "secondary" },
+          "prophet": { "score": 27, "max": 50, "rank": 3, "role": "supplementary" },
+          "shepherd": { "score": 13, "max": 50, "rank": 4, "role": "supplementary" },
+          "evangelist": { "score": 9, "max": 50, "rank": 5, "role": "supplementary" }
+        },
+        "combination": {
+          "keys": ["apostle", "teacher"],
+          "label": "Apostolic + Teaching (Architect Educator)",
+          "populationPercent": 5,
+          "descriptor": "Pioneers through systemic frameworks and deep theological architecture, cultivating movements driven by foundational truth."
+        },
+        "benchmarks": {
+          "apostle": { "you": 46, "others": 21, "populationPercent": 14 },
+          "teacher": { "you": 35, "others": 28, "populationPercent": 22 },
+          "prophet": { "you": 27, "others": 23, "populationPercent": 18 },
+          "shepherd": { "you": 13, "others": 27, "populationPercent": 28 },
+          "evangelist": { "you": 9, "others": 25, "populationPercent": 18 }
+        },
+        "supplementaryMaturity": [
+          { "key": "prophet", "oneStepTowardMaturity": "Practice active waiting in prayer before finalizing structural blueprints, allowing God's voice to challenge your timelines." },
+          { "key": "shepherd", "oneStepTowardMaturity": "Engage in a 30-minute 'humanizing conversation' with pastoral leaders before casting major initiatives to gauge relational cost." },
+          { "key": "evangelist", "oneStepTowardMaturity": "Translate dense architectural frameworks into accessible, everyday stories for non-churched neighbors." }
+        ]
+      }
+    },
+    {
+      "memberId": "mem_priya_nair_02",
+      "displayName": "Priya Nair",
+      "displayRole": "Director of Community Formation",
+      "tenureYears": 6,
+      "staffOrVolunteer": "staff",
+      "formalAuthority": false,
+      "reportDate": "2025-06-14",
+      "profile": {
+        "schemaVersion": 1,
+        "source": "fiveq_vocational_pdf",
+        "reportDate": "2025-06-14",
+        "scaleMax": 50,
+        "subjectNameOnReport": "Priya Nair",
+        "primary": "prophet",
+        "secondary": "shepherd",
+        "scores": {
+          "prophet": { "score": 47, "max": 50, "rank": 1, "role": "primary" },
+          "shepherd": { "score": 36, "max": 50, "rank": 2, "role": "secondary" },
+          "evangelist": { "score": 24, "max": 50, "rank": 3, "role": "supplementary" },
+          "teacher": { "score": 16, "max": 50, "rank": 4, "role": "supplementary" },
+          "apostle": { "score": 8, "max": 50, "rank": 5, "role": "supplementary" }
+        },
+        "combination": {
+          "keys": ["prophet", "shepherd"],
+          "label": "Prophetic + Shepherding (Covenant Caregiver)",
+          "populationPercent": 4,
+          "descriptor": "Confronts covenant drift with pastoral warmth, healing wounds while unflinchingly upholding God's standard of holiness and justice."
+        },
+        "benchmarks": {
+          "prophet": { "you": 47, "others": 23, "populationPercent": 18 },
+          "shepherd": { "you": 36, "others": 27, "populationPercent": 28 },
+          "evangelist": { "you": 24, "others": 25, "populationPercent": 18 },
+          "teacher": { "you": 16, "others": 28, "populationPercent": 22 },
+          "apostle": { "you": 8, "others": 21, "populationPercent": 14 }
+        },
+        "supplementaryMaturity": [
+          { "key": "evangelist", "oneStepTowardMaturity": "Infuse prophetic confrontation with the joyful grace of the gospel, ensuring the good news is celebrated before it is demanding." },
+          { "key": "teacher", "oneStepTowardMaturity": "Root moral conviction in structured, step-by-step catechesis so the community understands the rationale behind holiness." },
+          { "key": "apostle", "oneStepTowardMaturity": "Partner with movement builders to channel prophetic grief into concrete forward initiatives rather than perpetual critique." }
+        ]
+      }
+    },
+    {
+      "memberId": "mem_james_okafor_03",
+      "displayName": "James Okafor",
+      "displayRole": "Executive Pastor / Operations",
+      "tenureYears": 5,
+      "staffOrVolunteer": "staff",
+      "formalAuthority": true,
+      "reportDate": "2025-06-14",
+      "profile": {
+        "schemaVersion": 1,
+        "source": "fiveq_vocational_pdf",
+        "reportDate": "2025-06-14",
+        "scaleMax": 50,
+        "subjectNameOnReport": "James Okafor",
+        "primary": "shepherd",
+        "secondary": "teacher",
+        "scores": {
+          "shepherd": { "score": 48, "max": 50, "rank": 1, "role": "primary" },
+          "teacher": { "score": 37, "max": 50, "rank": 2, "role": "secondary" },
+          "prophet": { "score": 21, "max": 50, "rank": 3, "role": "supplementary" },
+          "evangelist": { "score": 12, "max": 50, "rank": 4, "role": "supplementary" },
+          "apostle": { "score": 7, "max": 50, "rank": 5, "role": "supplementary" }
+        },
+        "combination": {
+          "keys": ["shepherd", "teacher"],
+          "label": "Shepherding + Teaching (Discipleship Mentor)",
+          "populationPercent": 12,
+          "descriptor": "Provides steady relational infrastructure anchored in deep wisdom, cultivating environments of profound belonging and formation."
+        },
+        "benchmarks": {
+          "shepherd": { "you": 48, "others": 27, "populationPercent": 28 },
+          "teacher": { "you": 37, "others": 28, "populationPercent": 22 },
+          "prophet": { "you": 21, "others": 23, "populationPercent": 18 },
+          "evangelist": { "you": 12, "others": 25, "populationPercent": 18 },
+          "apostle": { "you": 7, "others": 21, "populationPercent": 14 }
+        },
+        "supplementaryMaturity": [
+          { "key": "prophet", "oneStepTowardMaturity": "Allow uncomfortable truths to sit in meetings without instinctively diffusing or softening them into safe consensus." },
+          { "key": "evangelist", "oneStepTowardMaturity": "Turn relational warmth outward toward strangers and de-churched individuals, not just established flock members." },
+          { "key": "apostle", "oneStepTowardMaturity": "Support risky, pioneering ventures even when they temporarily disrupt operational stability and equilibrium." }
+        ]
+      }
+    },
+    {
+      "memberId": "mem_sofia_reyes_04",
+      "displayName": "Sofia Reyes",
+      "displayRole": "Outreach & Neighborhood Engagement",
+      "tenureYears": 3,
+      "staffOrVolunteer": "staff",
+      "formalAuthority": false,
+      "reportDate": "2026-08-20",
+      "profile": {
+        "schemaVersion": 1,
+        "source": "fiveq_vocational_pdf",
+        "reportDate": "2026-08-20",
+        "scaleMax": 50,
+        "subjectNameOnReport": "Sofia Reyes",
+        "primary": "evangelist",
+        "secondary": "shepherd",
+        "scores": {
+          "evangelist": { "score": 45, "max": 50, "rank": 1, "role": "primary" },
+          "shepherd": { "score": 38, "max": 50, "rank": 2, "role": "secondary" },
+          "prophet": { "score": 20, "max": 50, "rank": 3, "role": "supplementary" },
+          "teacher": { "score": 14, "max": 50, "rank": 4, "role": "supplementary" },
+          "apostle": { "score": 8, "max": 50, "rank": 5, "role": "supplementary" }
+        },
+        "combination": {
+          "keys": ["evangelist", "shepherd"],
+          "label": "Evangelistic + Shepherding (Relational Gatherer)",
+          "populationPercent": 6,
+          "descriptor": "Gathers outsiders with magnetic warmth and retains them through genuine care, forming belonging before demanding doctrinal assent."
+        },
+        "benchmarks": {
+          "evangelist": { "you": 45, "others": 25, "populationPercent": 18 },
+          "shepherd": { "you": 38, "others": 27, "populationPercent": 28 },
+          "prophet": { "you": 20, "others": 23, "populationPercent": 18 },
+          "teacher": { "you": 14, "others": 28, "populationPercent": 22 },
+          "apostle": { "you": 8, "others": 21, "populationPercent": 14 }
+        },
+        "supplementaryMaturity": [
+          { "key": "prophet", "oneStepTowardMaturity": "Embrace healthy confrontation when discipleship requires naming sin, resisting the urge to prioritize pleasant feelings." },
+          { "key": "teacher", "oneStepTowardMaturity": "Engage foundational theological concepts to help seekers understand the intellectual coherence of the gospel." },
+          { "key": "apostle", "oneStepTowardMaturity": "Structure neighborhood relationships so they replicate and multiply beyond your personal relational capacity." }
+        ]
+      }
+    },
+    {
+      "memberId": "mem_daniel_park_05",
+      "displayName": "Daniel Park",
+      "displayRole": "Worship Pastor",
+      "tenureYears": 2,
+      "staffOrVolunteer": "staff",
+      "formalAuthority": false,
+      "reportDate": "2026-08-20",
+      "profile": {
+        "schemaVersion": 1,
+        "source": "fiveq_vocational_pdf",
+        "reportDate": "2026-08-20",
+        "scaleMax": 50,
+        "subjectNameOnReport": "Daniel Park",
+        "primary": "prophet",
+        "secondary": "teacher",
+        "scores": {
+          "prophet": { "score": 46, "max": 50, "rank": 1, "role": "primary" },
+          "teacher": { "score": 38, "max": 50, "rank": 2, "role": "secondary" },
+          "shepherd": { "score": 22, "max": 50, "rank": 3, "role": "supplementary" },
+          "evangelist": { "score": 11, "max": 50, "rank": 4, "role": "supplementary" },
+          "apostle": { "score": 6, "max": 50, "rank": 5, "role": "supplementary" }
+        },
+        "combination": {
+          "keys": ["prophet", "teacher"],
+          "label": "Prophetic + Teaching (Theological Interrogator / Reformer)",
+          "populationPercent": 5,
+          "descriptor": "Operates with holy discontent and theological precision, calling communities back to first loves, contemplative depth, and covenant faithfulness."
+        },
+        "benchmarks": {
+          "prophet": { "you": 46, "others": 23, "populationPercent": 18 },
+          "teacher": { "you": 38, "others": 28, "populationPercent": 22 },
+          "shepherd": { "you": 22, "others": 27, "populationPercent": 28 },
+          "evangelist": { "you": 11, "others": 25, "populationPercent": 18 },
+          "apostle": { "you": 6, "others": 21, "populationPercent": 14 }
+        },
+        "supplementaryMaturity": [
+          { "key": "shepherd", "oneStepTowardMaturity": "Deliver precise critiques with gentleness and patience, remembering that people grow through sustained affection." },
+          { "key": "evangelist", "oneStepTowardMaturity": "Express prophetic longing in ways that invite outsiders in rather than assuming an existing theological vocabulary." },
+          { "key": "apostle", "oneStepTowardMaturity": "Take action on reform insights by prototyping small experimental communities (e.g. household tables) without waiting for total institutional alignment." }
+        ]
+      }
+    }
+  ]
+}
