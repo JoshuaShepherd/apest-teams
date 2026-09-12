@@ -9,49 +9,49 @@ export function RosterTable() {
   const { state, updateMember, removeMember, setActiveMember } = useTeam();
 
   return (
-    <div className="overflow-x-auto rounded-xl border border-surface-border bg-white shadow-sm">
-      <table className="w-full text-left text-xs">
-        <thead className="bg-surface-subtle border-b border-surface-border uppercase font-mono text-[10px] text-ink-tertiary">
+    <div className="overflow-x-auto rounded-card border border-border-soft bg-card shadow-card" data-layer="SOURCE">
+      <table className="w-full text-left text-xs font-body">
+        <thead className="bg-surface-subtle border-b border-border-rule uppercase font-mono text-[10px] text-ink-tertiary">
           <tr>
-            <th className="py-3 px-4">Member Name</th>
-            <th className="py-3 px-4">Role Title</th>
-            <th className="py-3 px-4">Type</th>
-            <th className="py-3 px-4">Formal Authority</th>
-            <th className="py-3 px-4">5Q Profile Status</th>
-            <th className="py-3 px-4 text-right">Actions</th>
+            <th className="py-3.5 px-4">Member Name</th>
+            <th className="py-3.5 px-4">Role Title</th>
+            <th className="py-3.5 px-4">Type</th>
+            <th className="py-3.5 px-4">Formal Authority</th>
+            <th className="py-3.5 px-4">5Q Profile Status</th>
+            <th className="py-3.5 px-4 text-right">Actions</th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-surface-border">
+        <tbody className="divide-y divide-border-rule">
           {state.members.map((member) => (
             <tr
               key={member.id}
-              className="hover:bg-surface-subtle/50 transition-colors cursor-pointer"
+              className="hover:bg-surface-subtle/60 transition-colors cursor-pointer"
               onClick={() => setActiveMember(member)}
             >
-              <td className="py-3 px-4">
-                <div className="flex items-center gap-2.5">
-                  <div className="w-7 h-7 rounded-full bg-ink-primary text-white flex items-center justify-center font-bold text-[11px] font-serif">
+              <td className="py-3.5 px-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-heading font-bold text-xs shadow-sm">
                     {member.name
                       .split(' ')
                       .map((n) => n[0])
                       .join('')}
                   </div>
                   <div>
-                    <div className="font-semibold text-ink-primary">{member.name}</div>
-                    <div className="text-[11px] text-ink-tertiary">{member.email}</div>
+                    <div className="font-heading font-bold text-ink-primary">{member.name}</div>
+                    <div className="text-[11px] text-ink-tertiary font-mono">{member.email}</div>
                   </div>
                 </div>
               </td>
 
-              <td className="py-3 px-4 text-ink-secondary">{member.role}</td>
+              <td className="py-3.5 px-4 text-ink-secondary">{member.role}</td>
 
-              <td className="py-3 px-4">
-                <span className="px-2 py-0.5 rounded text-[10px] uppercase font-mono bg-surface-subtle border border-surface-border text-ink-secondary">
+              <td className="py-3.5 px-4">
+                <span className="px-2.5 py-0.5 rounded-button text-[10px] uppercase font-mono bg-surface-subtle border border-border-rule text-ink-secondary">
                   {member.isStaff ? 'Staff' : 'Volunteer'}
                 </span>
               </td>
 
-              <td className="py-3 px-4" onClick={(e) => e.stopPropagation()}>
+              <td className="py-3.5 px-4" onClick={(e) => e.stopPropagation()}>
                 <label className="inline-flex items-center gap-2 cursor-pointer">
                   <input
                     type="checkbox"
@@ -59,7 +59,7 @@ export function RosterTable() {
                     onChange={(e) =>
                       updateMember(member.id, { hasFormalAuthority: e.target.checked })
                     }
-                    className="rounded border-surface-border text-rose-600 focus:ring-rose-500 w-3.5 h-3.5"
+                    className="rounded border-border-rule text-primary focus:ring-primary w-4 h-4"
                   />
                   <span
                     className={`text-[11px] ${
@@ -71,30 +71,30 @@ export function RosterTable() {
                 </label>
               </td>
 
-              <td className="py-3 px-4">
+              <td className="py-3.5 px-4">
                 {member.status === 'complete' ? (
-                  <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
-                    <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-button text-[11px] font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                     <span>
                       {member.profile.primary.toUpperCase()} /{' '}
                       {member.profile.secondary.toUpperCase()} Connected
                     </span>
                   </div>
                 ) : (
-                  <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-medium bg-amber-50 text-amber-800 border border-amber-200">
-                    <Clock className="w-3 h-3 text-amber-600" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-button text-[11px] font-medium bg-amber-50 text-amber-800 border border-amber-200">
+                    <Clock className="w-3.5 h-3.5 text-amber-600" />
                     <span>Invite Sent (Pending)</span>
                   </div>
                 )}
               </td>
 
-              <td className="py-3 px-4 text-right" onClick={(e) => e.stopPropagation()}>
+              <td className="py-3.5 px-4 text-right" onClick={(e) => e.stopPropagation()}>
                 <button
                   onClick={() => removeMember(member.id)}
-                  className="p-1 text-ink-tertiary hover:text-rose-600 rounded transition-colors"
+                  className="p-1.5 text-ink-tertiary hover:text-rose-600 rounded-button transition-colors"
                   title="Remove from roster"
                 >
-                  <Trash2 className="w-3.5 h-3.5" />
+                  <Trash2 className="w-4 h-4" />
                 </button>
               </td>
             </tr>

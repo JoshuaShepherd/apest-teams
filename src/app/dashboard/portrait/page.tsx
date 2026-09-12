@@ -9,11 +9,13 @@ export default function PortraitPage() {
   return (
     <div className="space-y-8">
       <div className="space-y-1">
-        <div className="text-xs uppercase font-mono text-ink-tertiary">Layer 1 Diagnostic</div>
-        <h1 className="text-2xl sm:text-3xl font-serif font-bold text-ink-primary">
-          The Fivefold Team Portrait
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-button bg-surface-subtle border border-border-rule text-xs font-mono tracking-wider text-ink-secondary">
+          Layer 1 Diagnostic
+        </div>
+        <h1 className="text-2xl sm:text-4xl font-heading font-bold text-ink-primary tracking-tight">
+          The Fivefold <span className="italic font-normal text-primary">Team Portrait</span>
         </h1>
-        <p className="text-xs sm:text-sm text-ink-secondary max-w-2xl leading-relaxed">
+        <p className="text-xs sm:text-sm text-ink-secondary max-w-2xl leading-relaxed font-body">
           Measuring the individual and collective ecology of the body across 5Q pentagonal radar
           geometry, Organizational MRI maturity rings, and corrective pairwise relationships.
         </p>

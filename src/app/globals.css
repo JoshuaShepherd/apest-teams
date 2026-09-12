@@ -3,37 +3,141 @@
 @tailwind utilities;
 
 :root {
-  --background: #fbfbf9;
-  --foreground: #111827;
-  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-merriweather: 'Merriweather', Georgia, serif;
+  /* Fonts */
+  --font-heading: 'Newsreader', ui-serif, Georgia, serif;
+  --font-serif: 'Newsreader', ui-serif, Georgia, serif;
+  --font-body: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-reader: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Alan Hirsch Light Palette - Supabase Runtime Verified */
+  --background: 43 47% 97%; /* Warm Alabaster Parchment #faf8f5 */
+  --foreground: 80 6% 10%;   /* Deep Warm Ink #1a1c19 */
+  --surface: 43 47% 97%;
+  --surface-warm: 25 75% 97%;
+  --surface-raised: 0 0% 100%;
+  --surface-panel: 44 30% 93%;
+  --surface-container: 43 19% 93%;
+  --surface-container-low: 43 26% 95%;
+
+  /* Cards & Elevators */
+  --card: 40 75% 98%;        /* Warm Ivory Card #fdfbf7 */
+  --card-foreground: 80 6% 10%;
+  --popover: 40 75% 98%;
+  --popover-foreground: 80 6% 10%;
+
+  /* Amethyst Plum (Alan Hirsch Primary) */
+  --primary: 291 30% 18%;    /* Deep Amethyst Plum #3b2039 */
+  --primary-foreground: 40 75% 98%;
+  --primary-container: 291 21% 27%;
+  --on-primary-container: 293 26% 92%;
+  --primary-hover: 311 39% 13%;
+  --primary-soft: color-mix(in srgb, hsl(var(--primary)) 6%, transparent);
+  --primary-line: color-mix(in srgb, hsl(var(--primary)) 32%, transparent);
+  --primary-lift: color-mix(in srgb, hsl(var(--primary)) 55%, white);
+
+  /* Ochre Clay (Alan Hirsch Secondary / Warm Gold) */
+  --clay: 42 63% 33%;        /* Warm Ochre / Clay Gold #895f1e */
+  --clay-foreground: 0 0% 100%;
+  --clay-line: color-mix(in srgb, hsl(var(--clay)) 42%, transparent);
+  --clay-soft: color-mix(in srgb, hsl(var(--clay)) 12%, transparent);
+
+  /* Muted & Secondary */
+  --secondary: 43 19% 93%;
+  --secondary-foreground: 340 8% 15%;
+  --muted: 37 33% 91%;
+  --muted-foreground: 295 6% 41%;
+  --muted-subtle: 296 6% 52%;
+  --muted-faint: 34 8% 61%;
+  --accent: 293 26% 92%;
+  --accent-foreground: 291 21% 27%;
+
+  /* Borders & Rules */
+  --border: 43 20% 70%;
+  --border-soft: 40 32% 91%;
+  --border-rule: 40 29% 88%;
+  --border-faint: 37 18% 77%;
+  --ring: 291 30% 18%;
+
+  /* Readers & Typographic Accents */
+  --reader-ink: 30 11% 15%;
+  --reader-ink-soft: 27 6% 34%;
+
+  /* Radii */
+  --radius: 0.5rem;
+  --radius-card: 1.25rem;
+  --radius-panel: 1.375rem;
+  --radius-button: 9999px;
+  --radius-pill: 999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 2px hsl(0 0% 10% / 0.04), 0 14px 38px hsl(0 0% 10% / 0.07);
+  --shadow-tile: 0 12px 34px hsl(0 0% 10% / 0.13);
+  --shadow-nav: 0 1px 2px hsl(0 0% 10% / 0.05), 0 14px 40px hsl(0 0% 10% / 0.10);
+  --shadow-primary-glow: 0 4px 20px hsl(291 30% 18% / 0.12);
+  --shadow-primary-glow-md: 0 8px 28px hsl(291 30% 18% / 0.14);
+}
+
+.dark {
+  --background: 291 12% 8%;
+  --foreground: 43 30% 92%;
+  --surface: 291 12% 8%;
+  --surface-warm: 33 15% 14%;
+  --surface-raised: 33 15% 14%;
+  --surface-panel: 33 15% 14%;
+  --card: 291 10% 11%;
+  --card-foreground: 43 30% 92%;
+  --primary: 293 26% 78%;
+  --primary-foreground: 291 30% 12%;
+  --clay: 38 56% 52%;
+  --border: 291 8% 22%;
+  --border-soft: 36 15% 24%;
+  --border-rule: 36 15% 24%;
+  --muted: 291 8% 14%;
+  --muted-foreground: 295 8% 65%;
+  --accent: 291 12% 18%;
+  --accent-foreground: 293 26% 82%;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-inter);
+  color: hsl(var(--foreground));
+  background: hsl(var(--background));
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom Scrollbar for rich ink feel */
+/* Custom Scrollbar styled for Alan Hirsch palette */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f4f4f0;
+  background: hsl(var(--background));
 }
 ::-webkit-scrollbar-thumb {
-  background: #dcdcd6;
-  border-radius: 3px;
+  background: hsl(var(--border-rule));
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
+  background: hsl(var(--primary-line));
 }
 
-/* Print Stylesheet for 12-page executive report */
+/* 3-Layer Provenance Visual Indicator Styles */
+[data-provenance="on"] [data-layer="SOURCE"] {
+  background-color: hsl(var(--clay) / 0.1) !important;
+  border-color: hsl(var(--clay) / 0.3) !important;
+}
+[data-provenance="on"] [data-layer="COMPUTED"] {
+  background-color: hsl(var(--muted)) !important;
+  border-color: hsl(var(--border-soft)) !important;
+}
+[data-provenance="on"] [data-layer="INTERPRETED"] {
+  background-color: hsl(var(--primary) / 0.08) !important;
+  border-color: hsl(var(--primary) / 0.25) !important;
+}
+
+/* Print Stylesheet */
 @media print {
   body {
     background: #ffffff !important;
@@ -55,10 +159,9 @@ body {
     break-inside: avoid;
   }
 
-  /* Force white cards with subtle black borders for print clarity */
   .print-card {
     background: #ffffff !important;
-    border: 1px solid #d1d5db !important;
+    border: 1px solid #e5e7eb !important;
     box-shadow: none !important;
   }
 }

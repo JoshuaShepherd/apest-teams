@@ -8,13 +8,13 @@ export function PairingNetworkMap() {
   const { metrics, setIsThinkingHatsOpen } = useTeam();
 
   return (
-    <div className="p-6 sm:p-8 rounded-2xl bg-white border border-surface-border shadow-sm space-y-6">
+    <div className="p-6 sm:p-8 rounded-card bg-card border border-border-soft shadow-card space-y-6" data-layer="COMPUTED">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h3 className="font-serif font-bold text-lg text-ink-primary">
-            Corrective Relationship Network
+          <h3 className="font-heading font-bold text-xl text-ink-primary">
+            Corrective <span className="italic font-normal text-primary">Relationship Network</span>
           </h3>
-          <p className="text-xs text-ink-secondary">
+          <p className="text-xs text-ink-secondary font-body">
             Ecclesial health depends on active cross-functional tension. High Euclidean distance
             indicates maximum complementary leverage when discipled well.
           </p>
@@ -22,9 +22,9 @@ export function PairingNetworkMap() {
 
         <button
           onClick={() => setIsThinkingHatsOpen(true)}
-          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-surface-subtle hover:bg-surface-muted text-ink-primary border border-surface-border text-xs font-semibold transition-colors"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-button bg-surface-subtle hover:bg-surface-muted text-ink-primary border border-border-rule text-xs font-semibold transition-all hover:border-primary/40 shadow-sm"
         >
-          <GitMerge className="w-3.5 h-3.5 text-indigo-600" />
+          <GitMerge className="w-3.5 h-3.5 text-primary" />
           <span>Practice Pairings in Studio</span>
         </button>
       </div>
@@ -43,42 +43,42 @@ export function PairingNetworkMap() {
               key={idx}
               className={`p-4 rounded-xl border text-xs space-y-2.5 transition-all ${
                 isFurthest
-                  ? 'bg-rose-50/50 border-rose-200 shadow-sm'
+                  ? 'bg-rose-50/60 border-rose-200/80 shadow-sm'
                   : isClosest
-                  ? 'bg-emerald-50/50 border-emerald-200'
-                  : 'bg-surface-subtle/60 border-surface-border'
+                  ? 'bg-emerald-50/60 border-emerald-200/80'
+                  : 'bg-surface-subtle border-border-rule'
               }`}
             >
               <div className="flex items-center justify-between">
-                <div className="font-bold text-sm text-ink-primary flex items-center gap-2">
+                <div className="font-heading font-bold text-sm text-ink-primary flex items-center gap-2">
                   <span>{pair.memberA}</span>
-                  <span className="text-ink-tertiary font-normal">&harr;</span>
+                  <span className="text-clay font-normal">&harr;</span>
                   <span>{pair.memberB}</span>
                 </div>
 
                 <div className="flex items-center gap-1.5">
                   {isFurthest && (
-                    <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-rose-100 text-rose-800">
+                    <span className="px-2 py-0.5 rounded-button text-[10px] font-bold uppercase tracking-wider bg-rose-100 text-rose-800">
                       Greatest Tension
                     </span>
                   )}
                   {isClosest && (
-                    <span className="px-1.5 py-0.5 rounded text-[10px] font-bold uppercase bg-emerald-100 text-emerald-800">
+                    <span className="px-2 py-0.5 rounded-button text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800">
                       Highest Empathy
                     </span>
                   )}
-                  <span className="font-mono font-bold text-ink-secondary text-[11px] px-1.5 py-0.5 rounded bg-white border border-surface-border">
+                  <span className="font-mono font-bold text-ink-secondary text-[11px] px-2 py-0.5 rounded-button bg-white border border-border-rule">
                     d = {pair.euclideanDistance}
                   </span>
                 </div>
               </div>
 
-              <div className="font-semibold text-indigo-900 text-xs">{pair.tensionLabel}</div>
+              <div className="font-heading font-semibold text-primary text-xs">{pair.tensionLabel}</div>
 
-              <p className="text-ink-secondary leading-relaxed">{pair.correctiveDynamic}</p>
+              <p className="text-ink-secondary leading-relaxed font-body">{pair.correctiveDynamic}</p>
 
-              <div className="pt-1 text-[11px] text-rose-900/90 font-medium">
-                <strong>Systemic Risk if Ignored:</strong> {pair.riskIfIgnored}
+              <div className="pt-1 text-[11px] text-rose-950 font-medium">
+                <strong className="text-rose-900">Systemic Risk if Ignored:</strong> {pair.riskIfIgnored}
               </div>
             </div>
           );

@@ -10,11 +10,13 @@ export default function DiagnosticsPage() {
   return (
     <div className="space-y-8">
       <div className="space-y-1">
-        <div className="text-xs uppercase font-mono text-ink-tertiary">Layer 2 Diagnostics</div>
-        <h1 className="text-2xl sm:text-3xl font-serif font-bold text-ink-primary">
-          The Four Systemic Diagnostics
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-button bg-surface-subtle border border-border-rule text-xs font-mono tracking-wider text-ink-secondary">
+          Layer 2 Diagnostics
+        </div>
+        <h1 className="text-2xl sm:text-4xl font-heading font-bold text-ink-primary tracking-tight">
+          The Four <span className="italic font-normal text-primary">Systemic Diagnostics</span>
         </h1>
-        <p className="text-xs sm:text-sm text-ink-secondary max-w-2xl leading-relaxed">
+        <p className="text-xs sm:text-sm text-ink-secondary max-w-2xl leading-relaxed font-body">
           Exposing why teams get trapped in institutional equilibrium, which voices are structurally
           suppressed, and how weekly operational hours diverge from fivefold calling.
         </p>

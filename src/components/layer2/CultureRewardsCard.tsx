@@ -46,31 +46,31 @@ export function CultureRewardsCard() {
   ];
 
   return (
-    <div className="p-6 sm:p-8 rounded-2xl bg-white border border-surface-border shadow-sm space-y-6">
+    <div className="p-6 sm:p-8 rounded-card bg-card border border-border-soft shadow-card space-y-6" data-layer="INTERPRETED">
       <div className="flex items-center gap-3">
-        <div className="w-8 h-8 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-700 flex items-center justify-center font-bold text-xs">
+        <div className="w-8 h-8 rounded-full bg-primary/10 border border-primary/20 text-primary flex items-center justify-center font-heading font-bold text-xs">
           1
         </div>
         <div>
-          <h3 className="font-serif font-bold text-base text-ink-primary">
-            Diagnostic 1: What Does the Culture Reward?
+          <h3 className="font-heading font-bold text-lg text-ink-primary">
+            Diagnostic 1: <span className="italic font-normal text-primary">What Does the Culture Reward?</span>
           </h3>
-          <p className="text-xs text-ink-secondary">
+          <p className="text-xs text-ink-secondary font-body">
             Contrasting natural fivefold calling against historical Constantinian subsidies.
           </p>
         </div>
       </div>
 
-      <div className="space-y-4 text-xs">
+      <div className="space-y-4 text-xs font-body">
         {CULTURE_REWARDS_DATA.map((item) => (
-          <div key={item.func} className="p-4 rounded-xl bg-surface-subtle border border-surface-border space-y-2">
+          <div key={item.func} className="p-4 rounded-xl bg-surface-subtle border border-border-rule space-y-2">
             <div className="flex items-center justify-between">
-              <span className="font-bold text-sm text-ink-primary">{item.func}</span>
+              <span className="font-heading font-bold text-sm text-ink-primary">{item.func}</span>
               <span
-                className={`font-semibold px-2 py-0.5 rounded text-[11px] ${
+                className={`font-semibold px-2.5 py-0.5 rounded-button text-[11px] ${
                   item.cultureSubsidized > 30
-                    ? 'bg-emerald-100 text-emerald-800'
-                    : 'bg-rose-100 text-rose-800'
+                    ? 'bg-emerald-100/80 text-emerald-800'
+                    : 'bg-rose-100/80 text-rose-800'
                 }`}
               >
                 {item.verdict}
@@ -85,7 +85,7 @@ export function CultureRewardsCard() {
                 </div>
                 <div className="w-full h-1.5 rounded-full bg-surface-muted overflow-hidden">
                   <div
-                    className="h-full bg-indigo-600 rounded-full"
+                    className="h-full bg-primary rounded-full"
                     style={{ width: `${(item.callingScore / 50) * 100}%` }}
                   />
                 </div>
@@ -98,16 +98,14 @@ export function CultureRewardsCard() {
                 </div>
                 <div className="w-full h-1.5 rounded-full bg-surface-muted overflow-hidden">
                   <div
-                    className="h-full bg-amber-600 rounded-full"
+                    className="h-full bg-clay rounded-full"
                     style={{ width: `${(item.cultureSubsidized / 50) * 100}%` }}
                   />
                 </div>
               </div>
             </div>
 
-            <p className="text-ink-secondary text-[11px] leading-relaxed pt-1">
-              {item.notes}
-            </p>
+            <p className="text-ink-secondary text-[11px] leading-relaxed pt-1">{item.notes}</p>
           </div>
         ))}
       </div>

@@ -114,67 +114,69 @@ export function MissionalCopilotDrawer() {
         ];
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-end bg-black/40 backdrop-blur-sm animate-fade-in no-print">
+    <div className="fixed inset-0 z-50 flex justify-end bg-black/40 backdrop-blur-sm animate-fade-in no-print" data-layer="INTERPRETED">
       <div
-        className="w-full max-w-xl bg-surface-card h-full shadow-2xl flex flex-col border-l border-surface-border overflow-hidden animate-slide-left"
+        className="w-full max-w-xl bg-card h-full shadow-card flex flex-col border-l border-border-soft overflow-hidden animate-slide-left"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="p-5 border-b border-surface-border bg-surface-subtle flex items-center justify-between gap-4">
+        <div className="p-5 border-b border-border-rule bg-surface-subtle flex items-center justify-between gap-4">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-lg bg-ink-primary text-white flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-amber-300" />
+            <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center shadow-sm">
+              <Sparkles className="w-5 h-5 text-clay" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h3 className="font-bold text-sm text-ink-primary">Missional Copilot</h3>
-                <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-white border border-surface-border text-ink-secondary">
+                <h3 className="font-heading font-bold text-base text-ink-primary">
+                  Missional <span className="italic font-normal text-primary">Copilot</span>
+                </h3>
+                <span className="text-[10px] uppercase font-mono px-2.5 py-0.5 rounded-button bg-surface-subtle border border-border-rule text-ink-secondary">
                   Alan Hirsch Grounded
                 </span>
               </div>
-              <p className="text-xs text-ink-secondary">Ecclesial Diagnostic & Formation Agent</p>
+              <p className="text-xs text-ink-secondary font-body">Ecclesial Diagnostic & Formation Agent</p>
             </div>
           </div>
 
           <button
             onClick={() => setIsCopilotOpen(false)}
-            className="p-1.5 rounded-lg text-ink-secondary hover:text-ink-primary hover:bg-surface-muted transition-colors"
+            className="p-1.5 rounded-button text-ink-secondary hover:text-ink-primary hover:bg-surface-muted transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Mode Selector */}
-        <div className="p-3 border-b border-surface-border bg-white flex items-center justify-between gap-3 text-xs">
+        <div className="p-3 border-b border-border-rule bg-card flex items-center justify-between gap-3 text-xs font-body">
           <span className="text-ink-secondary font-medium">Operational Stance:</span>
-          <div className="flex items-center p-0.5 rounded-lg bg-surface-subtle border border-surface-border">
+          <div className="flex items-center p-0.5 rounded-button bg-surface-subtle border border-border-rule">
             <button
               onClick={() => setCopilotMode('interpretation')}
-              className={`flex items-center gap-1.5 px-3 py-1 rounded-md transition-all ${
+              className={`flex items-center gap-1.5 px-3.5 py-1 rounded-button transition-all text-xs ${
                 copilotMode === 'interpretation'
-                  ? 'bg-white shadow-sm font-semibold text-ink-primary'
+                  ? 'bg-primary text-primary-foreground font-semibold shadow-sm'
                   : 'text-ink-secondary hover:text-ink-primary'
               }`}
             >
-              <BookOpen className="w-3.5 h-3.5 text-sky-600" />
+              <BookOpen className="w-3.5 h-3.5" />
               <span>Interpretation</span>
             </button>
             <button
               onClick={() => setCopilotMode('challenge')}
-              className={`flex items-center gap-1.5 px-3 py-1 rounded-md transition-all ${
+              className={`flex items-center gap-1.5 px-3.5 py-1 rounded-button transition-all text-xs ${
                 copilotMode === 'challenge'
-                  ? 'bg-rose-50 shadow-sm font-semibold text-rose-900 border border-rose-200'
+                  ? 'bg-rose-800 text-white font-semibold shadow-sm'
                   : 'text-ink-secondary hover:text-ink-primary'
               }`}
             >
-              <Flame className="w-3.5 h-3.5 text-rose-600" />
+              <Flame className="w-3.5 h-3.5" />
               <span>Challenge Mode</span>
             </button>
           </div>
         </div>
 
         {/* Message Stream */}
-        <div className="flex-1 overflow-y-auto p-5 space-y-4">
+        <div className="flex-1 overflow-y-auto p-5 space-y-4 font-body">
           {messages.map((m) => (
             <div
               key={m.id}
@@ -183,28 +185,28 @@ export function MissionalCopilotDrawer() {
               }`}
             >
               <div
-                className={`max-w-[88%] rounded-xl p-4 text-xs leading-relaxed space-y-2 ${
+                className={`max-w-[88%] rounded-2xl p-4 text-xs leading-relaxed space-y-2 ${
                   m.sender === 'user'
-                    ? 'bg-ink-primary text-white rounded-br-none'
-                    : 'bg-surface-subtle text-ink-primary border border-surface-border rounded-bl-none'
+                    ? 'bg-primary text-primary-foreground rounded-br-none shadow-sm'
+                    : 'bg-surface-subtle text-ink-primary border border-border-rule rounded-bl-none shadow-sm'
                 }`}
               >
                 <div className="whitespace-pre-line">{m.text}</div>
                 {m.citation && (
-                  <div className="pt-2 border-t border-surface-border/60 text-[10px] text-indigo-700 font-mono flex items-center gap-1">
-                    <BookOpen className="w-3 h-3" />
+                  <div className="pt-2 border-t border-border-rule text-[10px] text-primary font-mono flex items-center gap-1">
+                    <BookOpen className="w-3 h-3 text-clay" />
                     <span>Theological Citation: {m.citation}</span>
                   </div>
                 )}
               </div>
-              <span className="text-[10px] text-ink-tertiary mt-1 px-1">{m.timestamp}</span>
+              <span className="text-[10px] text-ink-tertiary mt-1 px-1 font-mono">{m.timestamp}</span>
             </div>
           ))}
         </div>
 
         {/* Suggested Prompts */}
-        <div className="p-3 border-t border-surface-border bg-surface-subtle space-y-1.5">
-          <span className="text-[10px] uppercase font-mono text-ink-tertiary">
+        <div className="p-3.5 border-t border-border-rule bg-surface-subtle space-y-2">
+          <span className="text-[10px] uppercase font-mono tracking-wider text-ink-tertiary">
             Suggested Inquiries:
           </span>
           <div className="flex flex-wrap gap-1.5">
@@ -212,7 +214,7 @@ export function MissionalCopilotDrawer() {
               <button
                 key={q}
                 onClick={() => handleSend(q)}
-                className="text-[11px] text-left px-2.5 py-1 rounded-md bg-white border border-surface-border hover:border-ink-secondary text-ink-secondary transition-colors"
+                className="text-[11px] font-body text-left px-3 py-1 rounded-button bg-card border border-border-rule hover:border-primary/40 text-ink-secondary hover:text-primary transition-all shadow-sm"
               >
                 {q}
               </button>
@@ -221,7 +223,7 @@ export function MissionalCopilotDrawer() {
         </div>
 
         {/* Input Field */}
-        <div className="p-4 border-t border-surface-border bg-white flex items-center gap-2">
+        <div className="p-4 border-t border-border-rule bg-card flex items-center gap-2">
           <input
             type="text"
             value={input}
@@ -232,12 +234,12 @@ export function MissionalCopilotDrawer() {
                 ? 'Ask for a prophetic audit of your team...'
                 : 'Ask how to interpret your APEST scores...'
             }
-            className="flex-1 px-3.5 py-2 text-xs rounded-lg border border-surface-border bg-surface-subtle focus:bg-white focus:outline-none focus:ring-1 focus:ring-ink-primary"
+            className="flex-1 px-4 py-2 text-xs rounded-button border border-border-rule bg-surface-subtle focus:bg-card focus:outline-none focus:ring-1 focus:ring-primary font-body"
           />
           <button
             onClick={() => handleSend()}
             disabled={!input.trim()}
-            className="p-2 rounded-lg bg-ink-primary text-white hover:bg-ink-secondary disabled:opacity-40 transition-colors"
+            className="p-2.5 rounded-button bg-primary text-primary-foreground hover:bg-primary-hover disabled:opacity-40 transition-colors shadow-sm"
           >
             <Send className="w-4 h-4" />
           </button>

@@ -24,6 +24,8 @@ interface TeamContextValue {
   setIsThinkingHatsOpen: (open: boolean) => void;
   isQuarterlyReviewOpen: boolean;
   setIsQuarterlyReviewOpen: (open: boolean) => void;
+  provenance: boolean;
+  setProvenance: React.Dispatch<React.SetStateAction<boolean>>;
   addMember: (member: TeamMember) => void;
   updateMember: (id: string, updates: Partial<TeamMember>) => void;
   removeMember: (id: string) => void;
@@ -41,6 +43,7 @@ export function TeamProvider({ children }: { children: React.ReactNode }) {
   const [copilotMode, setCopilotMode] = useState<'interpretation' | 'challenge'>('interpretation');
   const [isThinkingHatsOpen, setIsThinkingHatsOpen] = useState(false);
   const [isQuarterlyReviewOpen, setIsQuarterlyReviewOpen] = useState(false);
+  const [provenance, setProvenance] = useState(false);
 
   // Compute metrics dynamically whenever members change
   const metrics = useMemo(() => calculateTeamMetrics(state.members), [state.members]);
@@ -99,6 +102,8 @@ export function TeamProvider({ children }: { children: React.ReactNode }) {
         setIsThinkingHatsOpen,
         isQuarterlyReviewOpen,
         setIsQuarterlyReviewOpen,
+        provenance,
+        setProvenance,
         addMember,
         updateMember,
         removeMember,

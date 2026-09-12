@@ -57,7 +57,7 @@ export function FiveQDropzone() {
   };
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-3" data-layer="SOURCE">
       <div
         onDragOver={(e) => {
           e.preventDefault();
@@ -70,17 +70,17 @@ export function FiveQDropzone() {
           handleSimulateAddCandidate();
         }}
         onClick={handleSimulateAddCandidate}
-        className={`p-6 sm:p-8 rounded-xl border-2 border-dashed text-center transition-all cursor-pointer ${
+        className={`p-6 sm:p-8 rounded-card border-2 border-dashed text-center transition-all cursor-pointer shadow-sm ${
           isHovered
-            ? 'border-ink-primary bg-surface-subtle'
-            : 'border-surface-border bg-white hover:border-ink-secondary hover:bg-surface-subtle/40'
+            ? 'border-primary bg-surface-subtle'
+            : 'border-border-rule bg-card hover:border-primary/40 hover:bg-surface-subtle/50'
         }`}
       >
-        <div className="max-w-md mx-auto space-y-2">
-          <div className="w-10 h-10 rounded-full bg-surface-subtle text-ink-primary mx-auto flex items-center justify-center">
-            <UploadCloud className="w-5 h-5" />
+        <div className="max-w-md mx-auto space-y-2 font-body">
+          <div className="w-12 h-12 rounded-full bg-primary/10 text-primary mx-auto flex items-center justify-center">
+            <UploadCloud className="w-6 h-6" />
           </div>
-          <div className="font-semibold text-xs text-ink-primary">
+          <div className="font-heading font-bold text-sm text-ink-primary">
             Click to upload 5Q Central PDF Report or drag and drop
           </div>
           <p className="text-[11px] text-ink-secondary leading-relaxed">
@@ -88,8 +88,8 @@ export function FiveQDropzone() {
             percentiles directly into your roster.
           </p>
           <div className="pt-2">
-            <span className="inline-flex items-center gap-1 text-[10px] font-mono px-2 py-0.5 rounded bg-surface-subtle border border-surface-border text-ink-secondary">
-              <Sparkles className="w-3 h-3 text-amber-500" />
+            <span className="inline-flex items-center gap-1.5 text-[10px] font-mono px-3 py-1 rounded-button bg-surface-subtle border border-border-rule text-ink-secondary">
+              <Sparkles className="w-3.5 h-3.5 text-clay" />
               Demo: Click to simulate parsing a 5Q Vocational PDF
             </span>
           </div>
@@ -97,8 +97,8 @@ export function FiveQDropzone() {
       </div>
 
       {successMessage && (
-        <div className="p-3 rounded-lg bg-emerald-50 border border-emerald-200 text-xs text-emerald-800 flex items-center gap-2">
-          <CheckCircle2 className="w-4 h-4 text-emerald-600" />
+        <div className="p-3.5 rounded-card bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 flex items-center gap-2.5 font-body">
+          <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
           <span>{successMessage}</span>
         </div>
       )}

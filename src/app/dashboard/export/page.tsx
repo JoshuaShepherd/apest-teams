@@ -15,12 +15,12 @@ export default function ExportReportPage() {
   };
 
   return (
-    <div className="space-y-8 pb-16">
+    <div className="space-y-8 pb-16 font-body" data-layer="INTERPRETED">
       {/* Action Bar (Hidden on print) */}
-      <div className="p-4 rounded-xl bg-white border border-surface-border shadow-sm flex items-center justify-between no-print">
+      <div className="p-4 rounded-card bg-card border border-border-soft shadow-card flex items-center justify-between no-print">
         <Link
           href="/dashboard"
-          className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-secondary hover:text-ink-primary transition-colors"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-secondary hover:text-primary transition-colors font-body"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to Dashboard</span>
@@ -28,38 +28,38 @@ export default function ExportReportPage() {
 
         <button
           onClick={handlePrint}
-          className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-ink-primary text-white text-xs font-semibold hover:bg-ink-secondary transition-all shadow-sm"
+          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-button bg-primary text-primary-foreground text-xs font-semibold hover:bg-primary-hover transition-all shadow-sm font-body"
         >
-          <Printer className="w-4 h-4" />
+          <Printer className="w-4 h-4 text-clay" />
           <span>Print / Save as PDF</span>
         </button>
       </div>
 
       {/* Document Canvas (Optimized for 8.5x11 printing) */}
-      <div className="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-2xl border border-surface-border shadow-md space-y-12 print:border-none print:shadow-none print:p-0">
+      <div className="max-w-4xl mx-auto bg-card p-8 sm:p-12 rounded-card border border-border-soft shadow-card space-y-12 print:border-none print:shadow-none print:p-0">
         {/* Cover Section */}
-        <div className="text-center py-16 border-b border-surface-border space-y-6 page-break-after">
-          <div className="w-16 h-16 rounded-2xl bg-ink-primary text-white mx-auto flex items-center justify-center font-serif font-bold text-2xl">
+        <div className="text-center py-16 border-b border-border-rule space-y-6 page-break-after">
+          <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground mx-auto flex items-center justify-center font-heading font-bold text-2xl shadow-md">
             5Q
           </div>
           <div className="space-y-2">
             <span className="text-xs uppercase font-mono tracking-widest text-ink-tertiary">
               Ecclesial Leadership Diagnostic Report
             </span>
-            <h1 className="text-4xl font-serif font-bold text-ink-primary">
+            <h1 className="text-4xl sm:text-5xl font-heading font-bold text-ink-primary tracking-tight">
               {state.team.teamName}
             </h1>
-            <p className="text-sm text-ink-secondary">
+            <p className="text-sm text-ink-secondary font-body">
               {state.team.city} • Evaluated {new Date().toLocaleDateString()}
             </p>
           </div>
 
-          <div className="max-w-md mx-auto p-4 rounded-xl bg-surface-subtle border border-surface-border text-xs space-y-2">
-            <div className="font-semibold text-ink-primary">Fullness Index ($Pleroma$):</div>
-            <div className="text-3xl font-mono font-bold text-ink-primary">
+          <div className="max-w-md mx-auto p-5 rounded-card bg-surface-subtle border border-border-rule text-xs space-y-2 shadow-sm">
+            <div className="font-heading font-semibold text-ink-primary">Fullness Index (<span className="italic font-normal text-primary">Pleroma</span>):</div>
+            <div className="text-4xl font-mono font-bold text-primary">
               {metrics.jesusSpaceArea}%
             </div>
-            <p className="text-[11px] text-ink-secondary">
+            <p className="text-[11px] text-ink-secondary font-body">
               Composite Ecclesial Health: {metrics.teamHealthScore} / 100
             </p>
           </div>
@@ -67,10 +67,10 @@ export default function ExportReportPage() {
 
         {/* Section 1: Theological Synthesis */}
         <div className="space-y-4 page-break-inside-avoid">
-          <h2 className="text-xl font-serif font-bold text-ink-primary border-b border-surface-border pb-2">
-            1. Theological Foundation & Core Thesis
+          <h2 className="text-xl font-heading font-bold text-ink-primary border-b border-border-rule pb-2">
+            1. Theological Foundation & <span className="italic font-normal text-primary">Core Thesis</span>
           </h2>
-          <p className="text-xs text-ink-secondary leading-relaxed">
+          <p className="text-xs text-ink-secondary leading-relaxed font-body">
             In Ephesians 4:1-16, the ascended Christ distributes five distinct vocational charisms
             (Apostle, Prophet, Evangelist, Shepherd, Teacher) across the whole body to attain to the
             fullness of Christ. No single leader carries all five. The leadership team is the primary
@@ -81,12 +81,12 @@ export default function ExportReportPage() {
 
         {/* Section 2: Team Roster & Vocational Scores */}
         <div className="space-y-4 page-break-inside-avoid">
-          <h2 className="text-xl font-serif font-bold text-ink-primary border-b border-surface-border pb-2">
-            2. The Fivefold Leadership Roster
+          <h2 className="text-xl font-heading font-bold text-ink-primary border-b border-border-rule pb-2">
+            2. The Fivefold <span className="italic font-normal text-primary">Leadership Roster</span>
           </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-xs border border-surface-border">
-              <thead className="bg-surface-subtle border-b border-surface-border text-[10px] font-mono text-ink-tertiary">
+          <div className="overflow-x-auto rounded-xl border border-border-rule">
+            <table className="w-full text-left text-xs font-body">
+              <thead className="bg-surface-subtle border-b border-border-rule text-[10px] font-mono text-ink-tertiary uppercase">
                 <tr>
                   <th className="p-2.5">Name</th>
                   <th className="p-2.5">Role</th>
@@ -95,13 +95,13 @@ export default function ExportReportPage() {
                   <th className="p-2.5 text-right">Scores (A-P-E-S-T)</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-surface-border">
+              <tbody className="divide-y divide-border-rule">
                 {state.members.map((m) => (
                   <tr key={m.id}>
-                    <td className="p-2.5 font-semibold text-ink-primary">{m.name}</td>
+                    <td className="p-2.5 font-heading font-bold text-ink-primary">{m.name}</td>
                     <td className="p-2.5 text-ink-secondary">{m.role}</td>
-                    <td className="p-2.5 uppercase font-bold text-xs">{m.profile.primary}</td>
-                    <td className="p-2.5 uppercase text-xs text-ink-secondary">
+                    <td className="p-2.5 uppercase font-heading font-bold text-primary text-xs">{m.profile.primary}</td>
+                    <td className="p-2.5 uppercase text-xs font-heading text-clay font-semibold">
                       {m.profile.secondary}
                     </td>
                     <td className="p-2.5 text-right font-mono text-ink-secondary">
@@ -118,13 +118,13 @@ export default function ExportReportPage() {
 
         {/* Section 3: Diagnostic Summary */}
         <div className="space-y-4 page-break-inside-avoid">
-          <h2 className="text-xl font-serif font-bold text-ink-primary border-b border-surface-border pb-2">
-            3. Core Diagnostic Finding: Constantinian Equilibrium
+          <h2 className="text-xl font-heading font-bold text-ink-primary border-b border-border-rule pb-2">
+            3. Core Diagnostic Finding: <span className="italic font-normal text-primary">Constantinian Equilibrium</span>
           </h2>
-          <div className="p-4 rounded-xl bg-surface-subtle border border-surface-border space-y-2 text-xs">
-            <div className="font-bold text-ink-primary">The Shepherd-Teacher Maintenance Trap</div>
+          <div className="p-5 rounded-card bg-surface-subtle border border-border-rule space-y-2 text-xs font-body">
+            <div className="font-heading font-bold text-sm text-ink-primary">The Shepherd-Teacher Maintenance Trap</div>
             <p className="text-ink-secondary leading-relaxed">
-              At Restoration Road, 85% of staff payroll hours are consumed by internal preaching prep,
+              At {state.team.teamName}, 85% of staff payroll hours are consumed by internal preaching prep,
               pastoral care triage, and administrative committee meetings. Meanwhile, the Apostle
               (Marcus Webb) is isolated without peer risk-bearers, and the Evangelist (Sofia Reyes)
               has no formal decision authority. The church&rsquo;s 3-year attendance plateau is the direct
@@ -134,14 +134,14 @@ export default function ExportReportPage() {
         </div>
 
         {/* Section 4: Covenant Agreement & Ratification */}
-        <div className="space-y-6 pt-6 border-t border-surface-border page-break-inside-avoid">
-          <h2 className="text-xl font-serif font-bold text-ink-primary border-b border-surface-border pb-2">
-            4. Ratified Ecclesial Covenant
+        <div className="space-y-6 pt-6 border-t border-border-rule page-break-inside-avoid">
+          <h2 className="text-xl font-heading font-bold text-ink-primary border-b border-border-rule pb-2">
+            4. Ratified <span className="italic font-normal text-primary">Ecclesial Covenant</span>
           </h2>
 
-          <div className="p-6 rounded-xl bg-surface-subtle border border-surface-border space-y-3 text-xs">
-            <div className="font-bold text-ink-primary">Shared 12-Month Discipleship Covenant:</div>
-            <p className="font-serif italic text-sm text-ink-secondary leading-relaxed">
+          <div className="p-6 rounded-card bg-surface-subtle border border-border-rule space-y-3 text-xs">
+            <div className="font-heading font-bold text-sm text-ink-primary">Shared 12-Month Discipleship Covenant:</div>
+            <p className="font-heading italic text-sm text-ink-primary leading-relaxed">
               &ldquo;We, the leadership team of {state.team.teamName}, covenant together before God to
               cultivate the fivefold fullness of Christ. We commit to practicing the 10 corrective
               pairings, protecting Sofia&rsquo;s evangelistic voice from administrative triage, scheduling
@@ -150,11 +150,11 @@ export default function ExportReportPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 text-xs">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 text-xs font-body">
             {state.members.map((m) => (
-              <div key={m.id} className="space-y-2 border-t border-ink-secondary/30 pt-2">
-                <div className="font-bold text-ink-primary">{m.name}</div>
-                <div className="text-[11px] text-ink-tertiary">
+              <div key={m.id} className="space-y-1.5 border-t border-border-rule pt-2">
+                <div className="font-heading font-bold text-ink-primary">{m.name}</div>
+                <div className="text-[11px] text-ink-tertiary font-mono">
                   {m.role} • {m.profile.primary.toUpperCase()}
                 </div>
               </div>

@@ -150,13 +150,13 @@ export function TwelveWeekPlan() {
   const progressPercent = Math.round((completedCount / modules.length) * 100);
 
   return (
-    <div className="p-6 sm:p-8 rounded-2xl bg-white border border-surface-border shadow-sm space-y-6">
+    <div className="p-6 sm:p-8 rounded-card bg-card border border-border-soft shadow-card space-y-6" data-layer="INTERPRETED">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h3 className="font-serif font-bold text-lg text-ink-primary">
-            12-Week Team Formation Roadmap
+          <h3 className="font-heading font-bold text-xl text-ink-primary">
+            12-Week Team <span className="italic font-normal text-primary">Formation Roadmap</span>
           </h3>
-          <p className="text-xs text-ink-secondary">
+          <p className="text-xs text-ink-secondary font-body">
             A step-by-step curriculum to move from static institutional equilibrium into self-correcting
             movemental discipleship.
           </p>
@@ -168,14 +168,14 @@ export function TwelveWeekPlan() {
           </span>
           <div className="w-24 h-2 rounded-full bg-surface-muted overflow-hidden">
             <div
-              className="h-full bg-indigo-600 rounded-full transition-all duration-500"
+              className="h-full bg-primary rounded-full transition-all duration-500"
               style={{ width: `${progressPercent}%` }}
             />
           </div>
         </div>
       </div>
 
-      <div className="space-y-3 text-xs">
+      <div className="space-y-3 text-xs font-body">
         {modules.map((m) => {
           const isExpanded = expandedWeek === m.week;
 
@@ -184,10 +184,10 @@ export function TwelveWeekPlan() {
               key={m.week}
               className={`rounded-xl border transition-all ${
                 m.completed
-                  ? 'bg-emerald-50/40 border-emerald-200'
+                  ? 'bg-emerald-50/40 border-emerald-200/80'
                   : isExpanded
-                  ? 'bg-surface-subtle border-ink-secondary/40 shadow-sm'
-                  : 'bg-white border-surface-border hover:border-ink-secondary/30'
+                  ? 'bg-surface-subtle border-primary/40 shadow-sm'
+                  : 'bg-card border-border-rule hover:border-primary/20'
               }`}
             >
               <div
@@ -214,12 +214,12 @@ export function TwelveWeekPlan() {
                       <span className="font-mono text-[10px] font-bold uppercase text-ink-tertiary">
                         Week {m.week}
                       </span>
-                      <span className="text-[10px] uppercase font-mono px-1.5 py-0.5 rounded bg-surface-muted text-ink-secondary">
+                      <span className="text-[10px] uppercase font-mono px-2 py-0.5 rounded-button bg-surface-subtle border border-border-rule text-ink-secondary">
                         Phase {m.phaseNum}: {m.phase}
                       </span>
                     </div>
                     <div
-                      className={`font-bold text-sm ${
+                      className={`font-heading font-bold text-sm ${
                         m.completed ? 'text-emerald-950 line-through opacity-80' : 'text-ink-primary'
                       }`}
                     >
@@ -234,24 +234,24 @@ export function TwelveWeekPlan() {
               </div>
 
               {isExpanded && (
-                <div className="px-4 pb-4 pt-1 border-t border-surface-border/60 space-y-3">
+                <div className="px-4 pb-4 pt-1 border-t border-border-rule space-y-3">
                   <p className="text-ink-secondary leading-relaxed">{m.theme}</p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                    <div className="p-3 rounded-lg bg-white border border-surface-border space-y-1">
-                      <div className="font-semibold text-indigo-900 flex items-center gap-1.5">
-                        <BookOpen className="w-3.5 h-3.5 text-indigo-600" />
+                    <div className="p-3 rounded-lg bg-card border border-border-rule space-y-1">
+                      <div className="font-heading font-semibold text-primary flex items-center gap-1.5 text-xs">
+                        <BookOpen className="w-3.5 h-3.5 text-primary" />
                         <span>Prescribed Theological Reading</span>
                       </div>
-                      <p className="text-ink-secondary">{m.reading}</p>
+                      <p className="text-ink-secondary text-[11px]">{m.reading}</p>
                     </div>
 
-                    <div className="p-3 rounded-lg bg-white border border-surface-border space-y-1">
-                      <div className="font-semibold text-emerald-900 flex items-center gap-1.5">
-                        <Sparkles className="w-3.5 h-3.5 text-emerald-600" />
+                    <div className="p-3 rounded-lg bg-card border border-border-rule space-y-1">
+                      <div className="font-heading font-semibold text-clay flex items-center gap-1.5 text-xs">
+                        <Sparkles className="w-3.5 h-3.5 text-clay" />
                         <span>Practical Staff Exercise</span>
                       </div>
-                      <p className="text-ink-secondary">{m.exercise}</p>
+                      <p className="text-ink-secondary text-[11px]">{m.exercise}</p>
                     </div>
                   </div>
                 </div>
