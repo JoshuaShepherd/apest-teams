@@ -3,10 +3,19 @@
 import React from 'react';
 import { CorrectiveActivators } from '@/components/layer3/CorrectiveActivators';
 import { DiscernmentArchive } from '@/components/layer3/DiscernmentArchive';
+import { ContextualBridge } from '@/components/dashboard/ContextualBridge';
 
 export default function CorrectivesPage() {
   return (
     <div className="space-y-8">
+      {/* Contextual Bridge back to 11-Panel Mirror */}
+      <ContextualBridge
+        currentLayer="Layer 3 Correctives Engine"
+        correspondingPanelNumber={9}
+        correspondingPanelTitle="The Corrective Pathway (and Thinking Hats Studio)"
+        phaseName="Phase 4: Action & Vision"
+      />
+
       <div className="space-y-1">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-button bg-surface-subtle border border-border-rule text-xs font-mono tracking-wider text-ink-secondary">
           Layer 3 Correctives Engine

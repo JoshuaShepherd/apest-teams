@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { CalendarClock, CheckCircle2, UserCheck, Flame, Heart, Compass, Sparkles } from 'lucide-react';
+import { CalendarClock, CheckCircle2, UserCheck, Flame, Heart, Compass, Sparkles, ArrowRight, GitMerge } from 'lucide-react';
+import Link from 'next/link';
 import { AmbiguityNote } from '../AmbiguityNote';
 
 export function Panel9CorrectivePathway({ onNext }: { onNext?: () => void }) {
@@ -207,6 +208,47 @@ export function Panel9CorrectivePathway({ onNext }: { onNext?: () => void }) {
         </div>
       </div>
 
+            {/* Deep-Dive Bridges to Layer 3 Correctives & Layer 4 Formation */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="p-4 rounded-xl bg-surface-subtle border border-border-rule flex flex-col justify-between gap-3 text-xs">
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 font-heading font-semibold text-foreground">
+              <GitMerge className="w-4 h-4 text-primary" />
+              <span>Layer 3: Correctives Engine</span>
+            </div>
+            <p className="text-muted-foreground font-body">
+              Engage the Thinking Hats facilitation studio and explore all 10 canonical pairwise friction relationships.
+            </p>
+          </div>
+          <Link
+            href="/dashboard/correctives"
+            className="inline-flex items-center justify-between px-3.5 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shadow-xs"
+          >
+            <span>Open Correctives Studio</span>
+            <ArrowRight className="w-3.5 h-3.5 text-primary" />
+          </Link>
+        </div>
+
+        <div className="p-4 rounded-xl bg-surface-subtle border border-border-rule flex flex-col justify-between gap-3 text-xs">
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 font-heading font-semibold text-foreground">
+              <Sparkles className="w-4 h-4 text-clay" />
+              <span>Layer 4: 12-Week Formation</span>
+            </div>
+            <p className="text-muted-foreground font-body">
+              Track the team longitudinal health score, orbital member development stages, and weekly action calendar.
+            </p>
+          </div>
+          <Link
+            href="/dashboard/formation"
+            className="inline-flex items-center justify-between px-3.5 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shadow-xs"
+          >
+            <span>Open 12-Week Roadmap</span>
+            <ArrowRight className="w-3.5 h-3.5 text-clay" />
+          </Link>
+        </div>
+      </div>
+
       {/* Sequential advance prompt */}
       {onNext && (
         <div className="pt-2 flex justify-end">
@@ -222,3 +264,4 @@ export function Panel9CorrectivePathway({ onNext }: { onNext?: () => void }) {
     </section>
   );
 }
+

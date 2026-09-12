@@ -4,10 +4,19 @@ import React from 'react';
 import { TwelveWeekPlan } from '@/components/layer4/TwelveWeekPlan';
 import { MemberFormationCards } from '@/components/layer4/MemberFormationCards';
 import { TeamHealthScore } from '@/components/layer4/TeamHealthScore';
+import { ContextualBridge } from '@/components/dashboard/ContextualBridge';
 
 export default function FormationPage() {
   return (
     <div className="space-y-8">
+      {/* Contextual Bridge back to 11-Panel Mirror */}
+      <ContextualBridge
+        currentLayer="Layer 4 Formation Engine"
+        correspondingPanelNumber={9}
+        correspondingPanelTitle="The Corrective Pathway (Horizon 1, 2 & 3)"
+        phaseName="Phase 4: Action & Vision"
+      />
+
       <div className="space-y-1">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-button bg-surface-subtle border border-border-rule text-xs font-mono tracking-wider text-ink-secondary">
           Layer 4 Formation Engine

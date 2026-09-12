@@ -837,7 +837,7 @@ export default function LandingPage() {
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
               <Link
-                href="/the-table"
+                href="/dashboard/correctives"
                 className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-button bg-card text-foreground border border-border-rule text-xs font-semibold hover:bg-muted transition-colors shadow-sm"
               >
                 <span>Try &ldquo;The Table&rdquo; Facilitation</span>
@@ -915,3 +915,4 @@ export default function LandingPage() {
     </div>
   );
 }
+

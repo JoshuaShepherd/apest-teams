@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { AlertTriangle, Info, CheckCircle2, ShieldAlert } from 'lucide-react';
+import { AlertTriangle, Info, CheckCircle2, ShieldAlert, Layers, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { EmptyChairIcon, MutedMicIcon, AbsenceFlag, SuppressionFlag } from '../SuppressionBadge';
 
 export function Panel3TeamMap({ onNext }: { onNext?: () => void }) {
@@ -302,6 +303,30 @@ export function Panel3TeamMap({ onNext }: { onNext?: () => void }) {
         </div>
       </div>
 
+            {/* Deep-Dive Bridge to Layer 1 Portrait */}
+      <div className="p-4 rounded-xl bg-surface-subtle border border-border-rule flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+        <div className="flex items-center gap-2.5">
+          <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+            <Layers className="w-4 h-4" />
+          </div>
+          <div>
+            <span className="font-heading font-semibold text-foreground block">
+              Explore Analytical Layer 1: Fivefold Team Portrait
+            </span>
+            <span className="text-muted-foreground font-body">
+              View the multi-ring Organizational MRI, pairwise Euclidean tension matrix, and individual APEST spider radars.
+            </span>
+          </div>
+        </div>
+        <Link
+          href="/dashboard/portrait"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shrink-0 shadow-xs"
+        >
+          <span>Open Layer 1 Portrait</span>
+          <ArrowRight className="w-3.5 h-3.5 text-primary" />
+        </Link>
+      </div>
+
       {/* Sequential advance prompt */}
       {onNext && (
         <div className="pt-2 flex justify-end">
@@ -317,3 +342,4 @@ export function Panel3TeamMap({ onNext }: { onNext?: () => void }) {
     </section>
   );
 }
+

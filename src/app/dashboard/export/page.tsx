@@ -4,6 +4,7 @@ import React from 'react';
 import { Printer, ArrowLeft, ShieldCheck, Calendar } from 'lucide-react';
 import Link from 'next/link';
 import { useTeam } from '@/context/TeamContext';
+import { ContextualBridge } from '@/components/dashboard/ContextualBridge';
 
 export default function ExportReportPage() {
   const { state, metrics } = useTeam();
@@ -16,6 +17,16 @@ export default function ExportReportPage() {
 
   return (
     <div className="space-y-8 pb-16 font-body" data-layer="INTERPRETED">
+            {/* Contextual Bridge back to 11-Panel Mirror */}
+      <div className="no-print">
+        <ContextualBridge
+          currentLayer="Board Export & Print Dossier"
+          correspondingPanelNumber={11}
+          correspondingPanelTitle="The Fullness Vision (and Retreat Print Guide)"
+          phaseName="Phase 4: Action & Vision"
+        />
+      </div>
+
       {/* Action Bar (Hidden on print) */}
       <div className="p-4 rounded-card bg-card border border-border-soft shadow-card flex items-center justify-between no-print">
         <Link
@@ -165,3 +176,4 @@ export default function ExportReportPage() {
     </div>
   );
 }
+

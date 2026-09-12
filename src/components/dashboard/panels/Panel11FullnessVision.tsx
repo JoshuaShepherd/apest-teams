@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Sparkles, Heart, Printer, RotateCcw, ArrowUpRight } from 'lucide-react';
+import { Sparkles, Heart, Printer, RotateCcw, ArrowUpRight, FileSpreadsheet, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export function Panel11FullnessVision({
   onRestart,
@@ -186,6 +187,30 @@ export function Panel11FullnessVision({
         </div>
       </div>
 
+            {/* Deep-Dive Bridge to Layer 5 Board Export Dossier */}
+      <div className="p-4 rounded-xl bg-surface-subtle border border-border-rule flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+        <div className="flex items-center gap-2.5">
+          <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+            <FileSpreadsheet className="w-4 h-4" />
+          </div>
+          <div>
+            <span className="font-heading font-semibold text-foreground block">
+              Explore Executive Board Export & Printable Dossier
+            </span>
+            <span className="text-muted-foreground font-body">
+              Export a high-fidelity 12-page executive summary formatted for board packets, elders, and retreat facilitation.
+            </span>
+          </div>
+        </div>
+        <Link
+          href="/dashboard/export"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shrink-0 shadow-xs"
+        >
+          <span>Open Board Dossier</span>
+          <ArrowRight className="w-3.5 h-3.5 text-primary" />
+        </Link>
+      </div>
+
       {/* Action Footer */}
       <div className="pt-6 border-t border-border-rule/60 flex flex-col sm:flex-row items-center justify-between gap-4">
         {onRestart && (
@@ -211,3 +236,5 @@ export function Panel11FullnessVision({
     </section>
   );
 }
+
+

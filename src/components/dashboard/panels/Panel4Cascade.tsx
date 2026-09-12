@@ -1,7 +1,8 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, RefreshCw, AlertTriangle, GitMerge, CheckCircle } from 'lucide-react';
+import { ArrowRight, RefreshCw, AlertTriangle, GitMerge, CheckCircle, Activity } from 'lucide-react';
+import Link from 'next/link';
 import { EmptyChairIcon } from '../SuppressionBadge';
 
 const CASCADE_STEPS = [
@@ -211,6 +212,30 @@ export function Panel4Cascade({ onNext }: { onNext?: () => void }) {
         </div>
       </div>
 
+            {/* Deep-Dive Bridge to Layer 2 Diagnostics */}
+      <div className="p-4 rounded-xl bg-surface-subtle border border-border-rule flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+        <div className="flex items-center gap-2.5">
+          <div className="p-2 rounded-lg bg-primary/10 text-primary shrink-0">
+            <Activity className="w-4 h-4" />
+          </div>
+          <div>
+            <span className="font-heading font-semibold text-foreground block">
+              Explore Analytical Layer 2: Four Systemic Diagnostics
+            </span>
+            <span className="text-muted-foreground font-body">
+              Inspect the complete Functional Activity Inventory, Movement-Institution Arc, and Suppression Matrix.
+            </span>
+          </div>
+        </div>
+        <Link
+          href="/dashboard/diagnostics"
+          className="inline-flex items-center gap-1.5 px-4 py-2 rounded-button bg-card hover:bg-surface-warm border border-border-rule font-semibold text-foreground transition-colors shrink-0 shadow-xs"
+        >
+          <span>Open Layer 2 Diagnostics</span>
+          <ArrowRight className="w-3.5 h-3.5 text-primary" />
+        </Link>
+      </div>
+
       {/* Sequential advance prompt */}
       {onNext && (
         <div className="pt-2 flex justify-end">
@@ -226,3 +251,5 @@ export function Panel4Cascade({ onNext }: { onNext?: () => void }) {
     </section>
   );
 }
+
+

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import {
   Compass,
+  ChevronDown,
   Sparkles,
   Users,
   Activity,
@@ -63,6 +64,7 @@ export function MirrorDashboard() {
   const [isMarcusNoteOpen, setIsMarcusNoteOpen] = useState(false);
   const [isDigitalSummaryOpen, setIsDigitalSummaryOpen] = useState(false);
   const [isPrintGuideOpen, setIsPrintGuideOpen] = useState(false);
+  const [isMobileCompassOpen, setIsMobileCompassOpen] = useState(false);
 
   // Scroll to panel helper
   const scrollToPanel = (panelId: number) => {
@@ -201,6 +203,86 @@ export function MirrorDashboard() {
             Progress: {engagedPanels.length}/11 Panels Engaged
           </div>
         </div>
+      </div>
+
+            {/* Mobile / Tablet Responsive Discernment Compass */}
+      <div className="lg:hidden p-4 rounded-card bg-card border border-border-rule shadow-sm space-y-3">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Compass className="w-4 h-4 text-primary" />
+            <span className="font-heading font-bold text-xs text-foreground">
+              Discernment Compass ({engagedPanels.length}/11 Panels)
+            </span>
+          </div>
+          <button
+            onClick={() => setIsMobileCompassOpen((prev) => !prev)}
+            className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary px-3 py-1.5 rounded-button bg-primary/10 hover:bg-primary/20 transition-colors"
+          >
+            <span>{isMobileCompassOpen ? 'Close Menu' : 'Jump to Panel'}</span>
+            <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isMobileCompassOpen ? 'rotate-180' : ''}`} />
+          </button>
+        </div>
+
+        {/* Quick horizontal preview pills */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-[11px] font-mono">
+          {PANELS_LIST.map((panel) => {
+            const isEngaged = engagedPanels.includes(panel.id);
+            const isDimmed = isPanelDimmed(panel.id);
+            return (
+              <button
+                key={panel.id}
+                disabled={isDimmed}
+                onClick={() => scrollToPanel(panel.id)}
+                className={`px-3 py-1 rounded-full whitespace-nowrap border transition-all ${
+                  isEngaged
+                    ? 'bg-primary text-primary-foreground border-primary'
+                    : isDimmed
+                    ? 'opacity-40 bg-surface-subtle text-muted-foreground border-border-rule cursor-not-allowed'
+                    : 'bg-card text-foreground border-border-rule hover:bg-surface-warm'
+                }`}
+              >
+                {panel.id}. {panel.title.split(' ')[0]}
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Expanded Mobile Panel Menu */}
+        {isMobileCompassOpen && (
+          <nav className="pt-3 border-t border-border-rule/60 grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-body">
+            {PANELS_LIST.map((panel) => {
+              const isEngaged = engagedPanels.includes(panel.id);
+              const isDimmed = isPanelDimmed(panel.id);
+              return (
+                <button
+                  key={panel.id}
+                  disabled={isDimmed}
+                  onClick={() => {
+                    scrollToPanel(panel.id);
+                    setIsMobileCompassOpen(false);
+                  }}
+                  className={`text-left px-3 py-2.5 rounded-lg flex items-center justify-between border transition-all ${
+                    isEngaged
+                      ? 'bg-primary/10 border-primary/40 font-medium text-foreground'
+                      : isDimmed
+                      ? 'opacity-40 border-border-rule cursor-not-allowed text-muted-foreground'
+                      : 'bg-card border-border-rule hover:bg-surface-warm text-foreground'
+                  }`}
+                >
+                  <div className="flex items-center gap-2 truncate">
+                    <span
+                      className={`w-2 h-2 rounded-full shrink-0 ${
+                        isEngaged ? 'bg-primary' : 'bg-muted-foreground/40'
+                      }`}
+                    />
+                    <span className="truncate">{panel.id}. {panel.title}</span>
+                  </div>
+                  {isEngaged && <CheckCircle2 className="w-3.5 h-3.5 text-primary shrink-0 ml-1" />}
+                </button>
+              );
+            })}
+          </nav>
+        )}
       </div>
 
       {/* Main Grid: Left Navigation Rail (Sticky) & Main Panel Feed */}
@@ -392,3 +474,4 @@ export function MirrorDashboard() {
     </div>
   );
 }
+
