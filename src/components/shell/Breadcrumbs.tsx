@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
+  Compass,
   LayoutDashboard,
   Users,
   Activity,
@@ -15,8 +16,8 @@ import {
 const NAV_TABS = [
   {
     href: '/dashboard',
-    label: 'Overview',
-    icon: LayoutDashboard,
+    label: 'Team Mirror (11 Panels)',
+    icon: Compass,
     exact: true,
   },
   {
